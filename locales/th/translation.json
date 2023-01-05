@@ -1,1 +1,64 @@
-{}
+{
+  "pages": {
+    "home": {
+      "section-1": {
+        "header-1": "Tong Hua\nAsset Management",
+        "desc-1": "Write some description here"
+      },
+      "section-2": {
+        "header-1": "พันธกิจ",
+        "desc-1": "ดำเนินธุรกิจด้านการเงิน เงินทุนและหลักท รัพย์ โดยให้บริการวงเงินกู้หมุนเวียนระยะ สั้น โดยรับซื้อ หนี้การค้าในรูปของใบวางบิล ใบรับวางบิล หรือ invoice",
+        "components": {
+          "missions": [
+            {
+              "title": "Customer 1",
+              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "icon": "../../src/images/icon-512x512.png"
+            },
+            {
+              "title": "Customer 2",
+              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "icon": "../../src/images/icon-512x512.png"
+            },
+            {
+              "title": "Customer 3",
+              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "icon": "../../src/images/icon-512x512.png"
+            }
+          ]
+        }
+      },
+      "section-3": {
+        "header-1": "บริการของเรา",
+        "header-2": "บริหารการผ่อนชำระหนี้",
+        "desc-2": "ดำเนินธุรกิจด้านการเงิน เงินทุนและหลัก ทรัพย์โดยให้บริการวงเงินกู้ หมุนเวียน ระยะสั้น โดยรับซื้อ หนี้การค้าในรูปของ ใบวางบิล ใบรับวางบิล หรือ"
+      },
+      "section-4": {
+        "header-1": "ข่าวสารล่าสุด"
+      },
+      "section-5": {
+        "header-1": "ติดต่อเรา",
+        "components": {
+          "contact": {
+            "phone": [
+              { "display": "(+66) 2236-9171-6", "tel": "+66223691716" },
+              {
+                "display": "(+66) 2236-0143-44",
+                "tel": "+662236014344"
+              }
+            ],
+            "email": "contact@thamc.co.th"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "buttons": {
+      "about-us": "เกี่ยวกับเรา",
+      "read-more": "อ่านเพิ่มเติม",
+      "all-news": "ข่าวสารทั้งหทด",
+      "contact-us": "ติดต่อเพิ่มเติม"
+    }
+  }
+}

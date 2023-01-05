@@ -15,9 +15,16 @@ const UnderlineHeader: React.FC<UnderlineHeaderProps> = ({
   textClassName,
 }) => {
   return (
-    <div className={classNames('flex flex-col space-y-2', className)}>
+    <div
+      className={classNames('flex flex-col items-center space-y-2', className)}
+    >
       <h2 className={classNames('font-bold', textClassName)}>{title}</h2>
-      <div className={classNames('h-0.5 rounded-md', underlineClassName)} />
+      <div
+        className={classNames(
+          'h-0.5 rounded-md border-b border-primary-main w-1/2',
+          underlineClassName,
+        )}
+      />
     </div>
   );
 };
