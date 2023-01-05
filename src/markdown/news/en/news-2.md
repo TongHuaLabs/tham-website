@@ -1,11 +1,10 @@
 ---
-category: /news/blog/
 lang: en
-title: News Test
+title: NEWS TEST
 description: lorem
-slug: news-test
+slug: /news/blog/news-2
 cover: ../../../images/meta-default.png
 date: 2022-08-19
 ---
 
-Example News
+ทดสอบข่าว 2

@@ -1,11 +1,10 @@
 ---
-category: /news/blog/
 lang: th
 title: ทดสอบข่าว
 description: lorem
-slug: news-test
+slug: /news/blog/news-2
 cover: ../../../images/meta-default.png
 date: 2022-08-19
 ---
 
-ทดสอบข่าว
+ทดสอบข่าว 2
