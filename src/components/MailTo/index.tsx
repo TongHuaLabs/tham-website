@@ -28,7 +28,7 @@ const MailTo: React.FC<MailToProps> = ({
       />
       <span
         className={classNames(
-          `font-medium group-hover:text-primary-main`,
+          `font-medium group-hover:text-primary-main w-11/12`,
           textClassName,
         )}
       >
