@@ -1,9 +1,8 @@
 import React from 'react';
 import MainLayout from '@/layouts/MainLayout';
 import UnderlineHeader from '@/components/UnderlineHeader';
-import { Link, useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, PageProps } from 'gatsby';
-import { PrimaryButton } from '@/components/buttons';
 import { NewsCard } from '@/components/cards';
 
 type NewsPageProps = PageProps<GatsbyTypes.NewsPageQuery>;
@@ -21,6 +20,7 @@ const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
           title={t('pages.news.section-1.header-1')}
           textClassName="text-4xl"
           className="!items-start w-max md:pl-2"
+          heading="h1"
         />
         <div className="flex flex-col space-y-5 md:flex-wrap md:space-y-0 md:flex-row">
           {news.map(({ node }, key) => {

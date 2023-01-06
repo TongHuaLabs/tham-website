@@ -16,7 +16,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
   const isMd = useMd();
 
   const missions = (language === 'th' ? data.missionsTH : data.missionsEN)
-    ?.pages?.home?.section_2?.components?.missions;
+    ?.pages?.home?.section_2?.data?.missions;
 
   return (
     <MainLayout>
@@ -59,6 +59,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             title={t('pages.about.section-3.header-1')}
             textClassName="text-4xl"
             className="!items-start"
+            heading="h2"
           />
           <div
             dangerouslySetInnerHTML={{
@@ -80,6 +81,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
           textClassName="text-4xl"
+          heading="h2"
         />
         <p className="text-lg text-center mt-6">
           {t('pages.home.section-2.desc-1')}
@@ -132,7 +134,7 @@ export const query = graphql`
       pages {
         home {
           section_2 {
-            components {
+            data {
               missions {
                 title
                 desc
@@ -151,7 +153,7 @@ export const query = graphql`
       pages {
         home {
           section_2 {
-            components {
+            data {
               missions {
                 title
                 desc

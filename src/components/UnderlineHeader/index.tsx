@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 type UnderlineHeaderProps = {
+  heading: 'h1' | 'h2';
   title: string;
   className?: string;
   underlineClassName?: string;
@@ -9,6 +10,7 @@ type UnderlineHeaderProps = {
 };
 
 const UnderlineHeader: React.FC<UnderlineHeaderProps> = ({
+  heading,
   title,
   className,
   underlineClassName,
@@ -18,7 +20,11 @@ const UnderlineHeader: React.FC<UnderlineHeaderProps> = ({
     <div
       className={classNames('flex flex-col items-center space-y-2', className)}
     >
-      <h2 className={classNames('font-bold', textClassName)}>{title}</h2>
+      {heading === 'h1' ? (
+        <h1 className={classNames('font-bold', textClassName)}>{title}</h1>
+      ) : (
+        <h2 className={classNames('font-bold', textClassName)}>{title}</h2>
+      )}
       <div
         className={classNames(
           'h-0.5 rounded-md border-b border-primary-main w-1/2',

@@ -18,12 +18,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const { language } = useI18next();
 
   const missions = (language === 'th' ? data.missionsTH : data.missionsEN)
-    ?.pages?.home?.section_2?.components?.missions;
+    ?.pages?.home?.section_2?.data?.missions;
 
   const news = data.allMarkdownRemark.edges;
 
   const { contact: contactInfo } =
-    data.contactInfo?.pages?.home?.section_5?.components || {};
+    data.contactInfo?.pages?.home?.section_5?.data || {};
 
   const { phone, email } = contactInfo || {};
 
@@ -53,6 +53,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
           textClassName="text-4xl"
+          heading="h2"
         />
         <p className="text-lg text-center">
           {t('pages.home.section-2.desc-1')}
@@ -79,6 +80,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           <UnderlineHeader
             title={t('pages.home.section-3.header-1')}
             textClassName="text-4xl"
+            heading="h2"
           />
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
             <div className="lg:w-1/2 flex justify-end">
@@ -107,6 +109,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           <UnderlineHeader
             title={t('pages.home.section-4.header-1')}
             textClassName="text-4xl"
+            heading="h2"
           />
           <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
             {news.map(({ node }, key) => {
@@ -144,6 +147,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           <UnderlineHeader
             title={t('pages.home.section-5.header-1')}
             className="text-4xl font-bold !items-start"
+            heading="h2"
           />
           <div className="space-y-2">
             {phone?.map((info, key) => {
@@ -173,7 +177,7 @@ export const query = graphql`
       pages {
         home {
           section_2 {
-            components {
+            data {
               missions {
                 title
                 desc
@@ -192,7 +196,7 @@ export const query = graphql`
       pages {
         home {
           section_2 {
-            components {
+            data {
               missions {
                 title
                 desc
@@ -211,7 +215,7 @@ export const query = graphql`
       pages {
         home {
           section_5 {
-            components {
+            data {
               contact {
                 phone {
                   tel
