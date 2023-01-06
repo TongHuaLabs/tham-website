@@ -3,13 +3,13 @@ export const siteMetadata = {
   description: ``,
   twitter: `@thamc`,
   // siteUrl: `https://thamc.com`, // No trailing slash allowed!
-  // siteUrl: `https://tonghualabs.github.io`, // for demo
-  siteUrl: `http://localhost:8000`, // for demo
+  siteUrl: `https://tonghualabs.github.io`, // for demo
+  // siteUrl: `http://localhost:8000`, // for demo
   defaultMetaImage: '/images/meta-default.png', // Path to the image placed in the 'static' folder
 };
 
-// export const pathPrefix = '/tham-website';
-export const pathPrefix = '';
+export const pathPrefix = '/tham-website';
+// export const pathPrefix = '';
 
 export const plugins = [
   `gatsby-plugin-react-helmet`,
