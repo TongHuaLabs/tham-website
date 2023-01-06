@@ -10,7 +10,6 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import NewsCard from '@/components/cards/NewsCard';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
-import Logo from '@/images/logo.inline.svg';
 
 type IndexPageProps = PageProps<GatsbyTypes.IndexPageQuery>;
 
@@ -34,7 +33,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <section className="full-page flex justify-center bg-gradient-to-b from-primary-focus via-transparent to-transparent">
         <div className="w-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col">
-            <Logo className="w-full" />
+            <StaticImage src="../images/logo.inline.svg" alt="logo" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
             <h1 className="font-semibold text-neutral-900 text-4xl md:text-6xl whitespace-pre-line">
