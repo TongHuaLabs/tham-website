@@ -139,6 +139,11 @@
         "header-1": "Partner with us",
         "desc-1": "Driving Digital innovation through a culture of experimentation."
       }
+    },
+    "notfound": {
+      "section-1": {
+        "header-1": "ขออภัย ไม่พบหน้าเว็บไซต์ที่คุณต้องการ"
+      }
     }
   },
   "components": {
@@ -147,7 +152,9 @@
       "read-more": "อ่านเพิ่มเติม",
       "all-news": "ข่าวสารทั้งหทด",
       "contact-us": "ติดต่อเพิ่มเติม",
-      "career": "ตำแหน่งที่เปิดรับ"
+      "career": "ตำแหน่งที่เปิดรับ",
+      "go-to-home": "ไปหน้าหลัก",
+      "go-back": "กลับ"
     }
   }
 }
