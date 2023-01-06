@@ -18,99 +18,68 @@ export const onCreateWebpackConfig: GatsbyNode['onCreateWebpackConfig'] = ({
   });
 };
 
-// type AllMarkdownRemark = {
-//   edges: Array<{
-//     node: {
-//       frontmatter: {
-//         lang: string;
-//         slug: string;
-//         category: string;
-//       };
-//     };
-//   }>;
-// };
+type AllMarkdownRemark = {
+  edges: Array<{
+    node: {
+      frontmatter: {
+        lang: string;
+        slug: string;
+      };
+    };
+  }>;
+};
 
-// type GatsbyNodeQuery = {
-//   allMarkdownRemark: AllMarkdownRemark;
-//   bod: AllMarkdownRemark;
-// };
+type GatsbyNodeQuery = {
+  allMarkdownRemark: AllMarkdownRemark;
+  bod: AllMarkdownRemark;
+};
 
-// export const createPages: GatsbyNode['createPages'] = async ({
-//   graphql,
-//   actions,
-// }) => {
-//   const { data, errors } = await graphql<GatsbyNodeQuery>(`
-//     {
-//       allMarkdownRemark {
-//         edges {
-//           node {
-//             frontmatter {
-//               lang
-//               slug
-//               category
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `);
+export const createPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+}) => {
+  const { data, errors } = await graphql<GatsbyNodeQuery>(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              lang
+              slug
+            }
+          }
+        }
+      }
+    }
+  `);
 
-//   //   bod: allMarkdownRemark(
-//   //   filter: {
-//   //     frontmatter: { slug: { regex: "/about/board-of-directors/" } }
-//   //   }
-//   // ) {
-//   //   edges {
-//   //     node {
-//   //       id
-//   //       frontmatter {
-//   //         slug
-//   //       }
-//   //     }
-//   //   }
-//   // }
+  if (errors) {
+    return Promise.reject(errors);
+  }
 
-//   if (errors) {
-//     return Promise.reject(errors);
-//   }
+  const { allMarkdownRemark } = data || {};
 
-//   const { allMarkdownRemark } = data || {};
+  allMarkdownRemark?.edges.forEach(({ node }) => {
+    const { frontmatter } = node;
+    const { lang, slug } = frontmatter;
 
-//   allMarkdownRemark?.edges.forEach(({ node }) => {
-//     const { frontmatter } = node;
-//     const { lang, slug, category } = frontmatter;
+    {
+      lang === 'th' &&
+        actions.createPage({
+          path: slug,
+          component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
+          context: {
+            slug,
+          },
+        });
+    }
 
-//     {
-//       lang === 'th' &&
-//         actions.createPage({
-//           path: `${category}${slug}`,
-//           component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
-//           context: {
-//             category,
-//             slug,
-//           },
-//         });
-//     }
-
-//     actions.createPage({
-//       path: `${lang}${category}${slug}`,
-//       component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
-//       context: {
-//         category,
-//         slug,
-//       },
-//     });
-//   });
-
-//   // bod?.edges.forEach(({ node }) => {
-//   //   const { id, frontmatter } = node;
-//   //   const { slug } = frontmatter;
-//   //   actions.createPage({
-//   //     path: slug,
-//   //     component: path.resolve('src', 'templates', 'BodMarkdownTemplate.tsx'),
-//   //     context: {
-//   //       id,
-//   //     },
-//   //   });
-//   // });
-// };
+    actions.createPage({
+      path: `${lang}${slug}`,
+      component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
+      context: {
+        slug,
+      },
+    });
+  });
+};
