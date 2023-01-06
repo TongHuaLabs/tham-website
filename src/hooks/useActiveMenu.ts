@@ -11,9 +11,9 @@ export const useActiveMenu = (title: string) => {
       title === 'หน้าหลัก'
     ) {
       setIsActive(true);
-    } else if (pathname.includes('/businesses') && title === 'ธุรกิจในเครือ') {
+    } else if (pathname.includes('/contact') && title === 'ติดต่อเรา') {
       setIsActive(true);
-    } else if (pathname.includes('/newsroom') && title === 'ข่าวและกิจกรรม') {
+    } else if (pathname.includes('/news') && title === 'ข่าวสารบริษัท') {
       setIsActive(true);
     } else if (pathname.includes('/about') && title === 'เกี่ยวกับบริษัท') {
       setIsActive(true);
