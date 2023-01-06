@@ -35,7 +35,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           <div className="flex flex-col">
             <div className="bg-blue-500 w-36 h-36 md:w-96 md:h-96" />
           </div>
-          <div className="flex flex-col text-center lg:text-left">
+          <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
             <h1 className="font-semibold text-primary-main text-4xl md:text-6xl whitespace-pre-line">
               {t('pages.home.section-1.header-1')}
             </h1>
