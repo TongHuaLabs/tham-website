@@ -1,8 +1,9 @@
 import React from 'react';
-// import THHLogo from '@images/tonghua-logo-white.png';
+import Logo from '@images/logo.inline.svg';
 import Social from '@/components/Social';
 import DisclosureNavigation from '@/layouts/navigation/DisclosureNavigation';
 import { useRoute } from '@/hooks/useRoute';
+import { Link } from 'gatsby-plugin-react-i18next';
 
 type FooterProps = {};
 
@@ -12,8 +13,9 @@ const Footer: React.FC<FooterProps> = () => {
     <footer className="bg-primary-pressed">
       <div className="flex flex-col flex-wrap px-4 py-16 md:px-6 md:justify-between md:flex-row max-w-7xl mx-auto">
         <div className="w-full md:w-2/5 xl:w-2/4 md:pr-5 space-y-6">
-          {/* <img src={THHLogo} className="w-40" /> */}
-          <p className="text-white">LOGO</p>
+          <Link to="/">
+            <Logo className="w-8 h-8" />
+          </Link>
           <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
             {`877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์\nกรุงเทพมหานคร 10100`}
           </p>

@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby-plugin-react-i18next';
 import classNames from 'classnames';
-// import THHLogo from '@images/tonghua-holding.png';
+import Logo from '@images/logo.inline.svg';
 import PopoverNavigation from '@/layouts/navigation/PopoverNavigation';
 import { useRoute } from '@/hooks/useRoute';
 import MenuIcon from '@/icons/hamburger-menu.inline.svg';
 import CloseIcon from '@/icons/close.inline.svg';
-// import ChangeLocale from '@/components/ChangeLocale';
 
 type NavbarProps = {
   showClose: boolean;
@@ -32,8 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({
       )}
     >
       <Link to="/">
-        LOGO
-        {/* <img src={THHLogo} className="w-32" /> */}
+        <Logo className="w-8 h-full" />
       </Link>
       <ul className="flex items-center h-full space-x-6">
         {route.map(({ title, href, menu }, key) => (
