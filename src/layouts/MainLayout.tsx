@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/layouts/Navbar';
-// import Footer from '@/layouts/Footer';
-// import MobileSidebar from '@/layouts/MobileSidebar';
+import Footer from '@/layouts/Footer';
+import MobileSidebar from '@/layouts/MobileSidebar';
 interface MainLayoutProps {
   children: React.ReactNode;
 }
@@ -26,11 +26,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         className="sticky top-0 z-40"
       />
       <main className="flex-grow">{children}</main>
-      {/* <Footer />
+      <Footer />
       <MobileSidebar
         isShowing={mobileSidebar}
         onClose={() => setMobileSidebar(false)}
-      /> */}
+      />
     </div>
   );
 };
