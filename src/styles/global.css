@@ -13,7 +13,13 @@
 
 @layer components {
   .full-page {
-    min-height: calc(100vh - 64px);
+    height: calc(100vh - 64px);
+  }
+  .about a {
+    @apply text-primary-main font-normal hover:underline text-lg;
+  }
+  .about {
+    @apply text-lg;
   }
 }
 
