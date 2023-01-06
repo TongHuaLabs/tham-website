@@ -6,8 +6,8 @@ import { graphql, PageProps } from 'gatsby';
 import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
 import { useMd } from '@/hooks/responsive';
-import Logo from '@/images/logo.inline.svg';
 import Career from '@images/career.inline.svg';
+import { StaticImage } from 'gatsby-plugin-image';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -34,7 +34,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             />
           </div>
           <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
-            <Logo className="w-full md:w-auto" />
+            <StaticImage src="../images/logo.inline.svg" alt="logo" />
           </div>
         </div>
       </section>
@@ -69,7 +69,11 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           />
           <p>{t('pages.about.section-3.desc-2')}</p>
         </div>
-        <Logo className="w-72 lg:w-1/4" />
+        <StaticImage
+          src="../images/logo.inline.svg"
+          alt="logo"
+          className="w-72 lg:w-1/4"
+        />
       </section>
 
       {/* Section 4: พันธกิจ */}
