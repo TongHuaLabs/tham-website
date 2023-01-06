@@ -26,9 +26,9 @@ const BranchCard: React.FC<BranchCardType> = ({
         className,
       )}
     >
-      <div className="flex flex-row items-center space-x-3">
+      <div className="flex flex-row items-center space-x-1">
         <MapPinIcon className="w-6 h-6 text-primary-main" />
-        <h3 className="text-primary-main text-lg font-bold">{branch}</h3>
+        <h3 className="text-primary-main text-xl font-bold">{branch}</h3>
       </div>
       <p className="text-sm text-neutral-900">{location}</p>
       <div className="flex flex-row items-center">

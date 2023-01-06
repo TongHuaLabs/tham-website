@@ -7,8 +7,8 @@ import { ClockIcon, MapPinIcon } from '@heroicons/react/24/solid';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
 import { BranchCard } from '@/components/cards';
-import { StaticImage } from 'gatsby-plugin-image';
 import { PrimaryButton } from '@/components/buttons';
+import Partner from '@/images/partner-vector.inline.svg';
 
 type ContactUsPageProps = PageProps<GatsbyTypes.ContactUsPageQuery>;
 
@@ -34,7 +34,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
       <section className="flex flex-col items-start px-4 pt-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-10">
         <UnderlineHeader
           title={t('pages.contact-us.section-1.header-1')}
-          textClassName="text-4xl"
+          textClassName="text-4xl text-neutral-900"
           heading="h1"
           className="!items-start"
         />
@@ -53,8 +53,13 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                   phone={mPhone?.display}
                   tel={mPhone?.tel}
                   className="mt-4"
+                  textClassName="underline underline-offset-2 text-primary-main"
                 />
-                <MailTo mail={mMail} className="mt-2" />
+                <MailTo
+                  mail={mMail}
+                  className="mt-2"
+                  textClassName="underline underline-offset-2 text-primary-main"
+                />
               </div>
               <div className="w-full md:w-1/2 flex flex-col">
                 <span className="w-max bg-primary-main px-4 py-1 text-neutral-50 rounded-full text-base font-bold">
@@ -64,8 +69,13 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                   phone={oPhone?.display}
                   tel={oPhone?.tel}
                   className="mt-4"
+                  textClassName="underline underline-offset-2 text-primary-main"
                 />
-                <MailTo mail={oMail} className="mt-2" />
+                <MailTo
+                  mail={oMail}
+                  className="mt-2"
+                  textClassName="underline underline-offset-2 text-primary-main"
+                />
               </div>
             </div>
             <div className="flex flex-col md:flex-row lg:flex-col space-y-4 md:space-y-0 lg:space-y-4 items-start">
@@ -99,9 +109,10 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
       <section className="flex flex-col items-start px-4 py-20 md:px-6 lg:py-28 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-10">
         <UnderlineHeader
           title={t('pages.contact-us.section-2.header-1')}
-          textClassName="text-4xl"
+          textClassName="text-4xl text-neutral-900"
           heading="h2"
           className="!items-start"
+          underlineClassName="!border-primary-main"
         />
         <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
           {branches?.map((branch, key) => {
@@ -115,14 +126,14 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
       </section>
 
       {/* Section 3: Partner with us */}
-      <section className="bg-primary-surface">
+      <section className="bg-primary-focus">
         <div className="px-4 py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-20 lg:flex-row-reverse">
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
             <div className="lg:w-1/2 2xl:w-auto flex justify-end">
-              <StaticImage src="../images/services.png" alt="service" />
+              <Partner className="w-full md:w-1/2 h-full lg:w-full mx-auto" />
             </div>
             <div className="flex flex-col items-center lg:items-start lg:pr-4 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl font-bold">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-main">
                 {t('pages.contact-us.section-3.header-1')}
               </h2>
               <h3 className="text-2xl mt-2 md:mt-5 lg:mt-2">
