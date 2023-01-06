@@ -5,11 +5,20 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          main: '#D9231D',
-          surface: '#F5D7D7',
-          border: '#EEBDBD',
-          hover: '#A93030',
-          pressed: '#89232B',
+          main: '#288CB3',
+          surface: '#D4E8F0',
+          border: '#B7D9E6',
+          hover: '#217595',
+          pressed: '#14465A',
+          focus: 'rgba(40, 140, 179, 0.1)',
+        },
+        secondary: {
+          main: '#E50000',
+          surface: '#FACCCC',
+          border: '#F6AAAA',
+          hover: '#BF0000',
+          pressed: '##720000',
+          focus: 'rgba(229, 0, 0, 0.2)',
         },
         brand: {
           red: '#ED1C24',

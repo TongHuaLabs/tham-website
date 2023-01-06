@@ -10,6 +10,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import NewsCard from '@/components/cards/NewsCard';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
+import Logo from '@/images/logo.inline.svg';
 
 type IndexPageProps = PageProps<GatsbyTypes.IndexPageQuery>;
 
@@ -30,16 +31,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   return (
     <MainLayout>
       {/* Section 1: Tong Hua Asset Management */}
-      <section className="full-page flex justify-center bg-gradient-to-t from-primary-main via-transparent to-transparent">
+      <section className="full-page flex justify-center bg-gradient-to-b from-primary-focus via-transparent to-transparent">
         <div className="w-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col">
-            <div className="bg-blue-500 w-36 h-36 md:w-96 md:h-96" />
+            <Logo className="w-full" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
-            <h1 className="font-semibold text-primary-main text-4xl md:text-6xl whitespace-pre-line">
+            <h1 className="font-semibold text-neutral-900 text-4xl md:text-6xl whitespace-pre-line">
               {t('pages.home.section-1.header-1')}
             </h1>
-            <h2 className="text-primary-main text-xl md:text-2xl mt-4">
+            <h2 className="text-neutral-900 text-xl md:text-2xl mt-4">
               {t('pages.home.section-1.desc-1')}
             </h2>
             <Link to="/contact" className="mt-10 lg:mt-16">
@@ -52,10 +53,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <section className="flex flex-col justify-center items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
-          textClassName="text-4xl"
+          textClassName="text-4xl text-neutral-900"
           heading="h2"
         />
-        <p className="text-lg text-center">
+        <p className="text-lg text-center text-neutral-900">
           {t('pages.home.section-2.desc-1')}
         </p>
         <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0">
@@ -75,22 +76,22 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         </div>
       </section>
       {/* Section 3: Services */}
-      <section className="bg-primary-border">
+      <section className="bg-primary-focus">
         <div className="flex flex-col justify-center items-center space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
           <UnderlineHeader
             title={t('pages.home.section-3.header-1')}
-            textClassName="text-4xl"
+            textClassName="text-4xl text-neutral-900"
             heading="h2"
           />
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
-            <div className="lg:w-1/2 flex justify-end">
+            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <StaticImage src="../images/services.png" alt="service" />
             </div>
             <div className="flex flex-col items-center lg:items-start lg:pr-4">
-              <h2 className="text-neutral-900 text-3xl font-bold mt-4">
+              <h2 className="text-primary-main text-3xl font-bold mt-4">
                 {t('pages.home.section-3.header-2')}
               </h2>
-              <p className="text-lg md:text-xl mt-2 text-center lg:text-left">
+              <p className="text-lg md:text-xl mt-2 text-center lg:text-left text-neutral-900">
                 {t('pages.home.section-3.desc-2')}
               </p>
               <Link to="/services" className="mt-10">
@@ -108,7 +109,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         <section className="flex flex-col justify-center items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16">
           <UnderlineHeader
             title={t('pages.home.section-4.header-1')}
-            textClassName="text-4xl"
+            textClassName="text-4xl text-neutral-900"
             heading="h2"
           />
           <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
@@ -142,11 +143,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-        <div className="flex flex-col h-80 bg-primary-surface md:w-1/2 px-6 lg:px-24 xl:px-32 md:px-8 md:h-96 justify-center items-start space-y-10">
-          {/* ข้อมูลการติดต่อ */}
+        <div className="flex flex-col h-80 bg-primary-focus md:w-1/2 px-6 lg:px-24 xl:px-32 md:px-8 md:h-96 justify-center items-start space-y-10">
           <UnderlineHeader
             title={t('pages.home.section-5.header-1')}
-            className="text-4xl font-bold !items-start"
+            className="text-4xl font-bold !items-start text-neutral-900"
             heading="h2"
           />
           <div className="space-y-2">
@@ -157,11 +157,14 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                   key={key}
                   phone={display}
                   tel={tel}
-                  className="text-xl font-medium"
+                  className="text-xl font-medium text-neutral-900"
                 />
               );
             })}
-            <MailTo mail={email} className="text-xl font-medium" />
+            <MailTo
+              mail={email}
+              className="text-xl font-medium text-neutral-900"
+            />
           </div>
         </div>
       </section>
