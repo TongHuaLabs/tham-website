@@ -129,8 +129,8 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
               <h3 className="text-2xl mt-4">
                 {t('pages.contact-us.section-3.desc-1')}
               </h3>
-              <Link to="/" className="mt-10">
-                <PrimaryButton title={t('components.buttons.career')} />
+              <Link to="/career" className="mt-10">
+                <PrimaryButton title={t('components.buttons.contact-us')} />
               </Link>
             </div>
           </div>
