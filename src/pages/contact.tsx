@@ -44,7 +44,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
 
         <div className="w-full lg:h-72 flex flex-col items-start lg:items-center lg:space-x-6 space-y-10 lg:space-y-0 lg:flex-row">
           <div className="w-full flex lg:h-full flex-col space-y-10 lg:w-3/5 lg:justify-between lg:space-y-0">
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row space-y-10 md:space-y-0">
               <div className="w-full md:w-1/2 flex flex-col">
                 <span className="w-max bg-primary-main px-4 py-1 text-neutral-50 rounded-full text-base font-bold">
                   {mTitle}
@@ -53,13 +53,8 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                   phone={mPhone?.display}
                   tel={mPhone?.tel}
                   className="mt-4"
-                  textClassName="underline underline-offset-2 text-primary-main"
                 />
-                <MailTo
-                  mail={mMail}
-                  className="mt-2"
-                  textClassName="underline underline-offset-2 text-primary-main"
-                />
+                <MailTo mail={mMail} className="mt-2" />
               </div>
               <div className="w-full md:w-1/2 flex flex-col">
                 <span className="w-max bg-primary-main px-4 py-1 text-neutral-50 rounded-full text-base font-bold">
@@ -69,13 +64,8 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                   phone={oPhone?.display}
                   tel={oPhone?.tel}
                   className="mt-4"
-                  textClassName="underline underline-offset-2 text-primary-main"
                 />
-                <MailTo
-                  mail={oMail}
-                  className="mt-2"
-                  textClassName="underline underline-offset-2 text-primary-main"
-                />
+                <MailTo mail={oMail} className="mt-2" />
               </div>
             </div>
             <div className="flex flex-col md:flex-row lg:flex-col space-y-4 md:space-y-0 lg:space-y-4 items-start">
@@ -136,7 +126,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
               <h2 className="text-4xl md:text-5xl font-bold text-primary-main">
                 {t('pages.contact-us.section-3.header-1')}
               </h2>
-              <h3 className="text-2xl mt-2 md:mt-5 lg:mt-2">
+              <h3 className="text-2xl mt-4">
                 {t('pages.contact-us.section-3.desc-1')}
               </h3>
               <Link to="/" className="mt-10">

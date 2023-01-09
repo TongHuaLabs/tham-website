@@ -15,7 +15,7 @@ const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
   return (
     <MainLayout>
       {/* Section 1: ข่าวสารบริษัททั้งหมด */}
-      <section className="px-4 py-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-20">
+      <section className="px-4 py-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-10">
         <UnderlineHeader
           title={t('pages.news.section-1.header-1')}
           textClassName="text-4xl text-neutral-900"
@@ -23,14 +23,14 @@ const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
           underlineClassName="!border-primary-main"
           heading="h1"
         />
-        <div className="flex flex-col space-y-5 md:flex-wrap md:space-y-0 md:flex-row">
+        <div className="flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
           {news.map(({ node }, key) => {
             const { title, description, date, cover, slug } =
               node.frontmatter || {};
             return (
               <NewsCard
                 title={title}
-                className="md:w-1/2 lg:w-1/3 md:p-2"
+                className="md:w-1/2 lg:w-1/3 md:p-4"
                 description={description}
                 coverImage={cover?.childImageSharp?.gatsbyImageData}
                 createdAt={date}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby-plugin-react-i18next';
 import classNames from 'classnames';
-import Logo from '@images/logo.inline.svg';
+import Logo from '@images/logo-navbar.inline.svg';
 import PopoverNavigation from '@/layouts/navigation/PopoverNavigation';
 import { useRoute } from '@/hooks/useRoute';
 import MenuIcon from '@/icons/hamburger-menu.inline.svg';
@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({
       )}
     >
       <Link to="/">
-        <Logo className="w-8 h-full" />
+        <Logo className="w-40 h-full" />
       </Link>
       <ul className="flex items-center h-full space-x-6">
         {route.map(({ title, href, menu }, key) => (

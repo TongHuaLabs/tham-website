@@ -20,15 +20,10 @@ const MailTo: React.FC<MailToProps> = ({
       className={classNames(`flex items-center space-x-2.5 group`, className)}
       href={`mailto:${mail}`}
     >
-      <EnvelopeIcon
-        className={classNames(
-          `w-6 h-6 group-hover:text-primary-main`,
-          iconClassName,
-        )}
-      />
+      <EnvelopeIcon className={classNames(`w-6 h-6`, iconClassName)} />
       <span
         className={classNames(
-          `font-medium group-hover:text-primary-main w-11/12`,
+          `font-medium text-primary-main group-hover:underline underline-offset-4 w-11/12`,
           textClassName,
         )}
       >

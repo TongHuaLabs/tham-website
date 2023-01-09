@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '@images/logo.inline.svg';
+import Logo from '@images/logo-navbar.inline.svg';
 import Social from '@/components/Social';
 import DisclosureNavigation from '@/layouts/navigation/DisclosureNavigation';
 import { useRoute } from '@/hooks/useRoute';
@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="flex flex-col flex-wrap px-4 py-16 md:px-6 md:justify-between md:flex-row max-w-7xl mx-auto">
         <div className="w-full md:w-2/5 xl:w-2/4 md:pr-5 space-y-6">
           <Link to="/">
-            <Logo className="w-8 h-8" />
+            <Logo className="w-40" />
           </Link>
           <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
             {`877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์\nกรุงเทพมหานคร 10100`}
