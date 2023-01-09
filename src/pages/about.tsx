@@ -120,7 +120,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           <h3 className="text-2xl text-neutral-900 mt-4 text-center lg:text-left lg:px-0">
             {t('pages.about.section-4.desc-1')}
           </h3>
-          <Link to="/contact" className="mt-5">
+          <Link to="/career" className="mt-5">
             <PrimaryButton title={t('components.buttons.career')} />
           </Link>
         </div>
