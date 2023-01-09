@@ -36,7 +36,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <StaticImage src="../images/logo.inline.svg" alt="logo" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
-            <h1 className="font-semibold text-neutral-900 text-4xl md:text-6xl whitespace-pre-line">
+            <h1 className="font-semibold text-neutral-900 text-4xl md:text-6xl whitespace-pre-line !leading-normal">
               {t('pages.home.section-1.header-1')}
             </h1>
             <h2 className="text-neutral-900 text-xl md:text-2xl mt-4">
@@ -49,16 +49,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
         </div>
       </section>
       {/* Section 2: Missions */}
-      <section className="flex flex-col justify-center items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
+      <section className="flex flex-col justify-center items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
           textClassName="text-4xl text-neutral-900"
           heading="h2"
         />
-        <p className="text-lg text-center text-neutral-900">
+        <p className="text-xl lg:text-2xl text-center text-neutral-900 mt-6">
           {t('pages.home.section-2.desc-1')}
         </p>
-        <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0">
+        <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0 mt-16">
           {missions?.map((mission, key) => {
             const { title, desc, icon } = mission || {};
             return (
@@ -90,7 +90,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
               <h2 className="text-primary-main text-3xl font-bold mt-4">
                 {t('pages.home.section-3.header-2')}
               </h2>
-              <p className="text-lg md:text-xl mt-2 text-center lg:text-left text-neutral-900">
+              <p className="text-lg md:text-xl mt-4 text-center lg:text-left text-neutral-900">
                 {t('pages.home.section-3.desc-2')}
               </p>
               <Link to="/services" className="mt-10">
@@ -105,7 +105,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       </section>
       {/* Section 4: News */}
       {news.length > 0 && (
-        <section className="flex flex-col justify-center items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16">
+        <section className="flex flex-col justify-center items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-10">
           <UnderlineHeader
             title={t('pages.home.section-4.header-1')}
             textClassName="text-4xl text-neutral-900"
@@ -156,14 +156,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                   key={key}
                   phone={display}
                   tel={tel}
-                  className="text-xl font-medium text-neutral-900"
+                  className="text-xl font-medium"
                 />
               );
             })}
-            <MailTo
-              mail={email}
-              className="text-xl font-medium text-neutral-900"
-            />
+            <MailTo mail={email} className="text-xl font-medium" />
           </div>
         </div>
       </section>

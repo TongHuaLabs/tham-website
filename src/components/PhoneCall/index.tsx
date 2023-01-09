@@ -22,15 +22,10 @@ const PhoneCall: React.FC<PhoneCallProps> = ({
       className={classNames(`flex items-center space-x-2.5 group`, className)}
       href={`tel:${tel}`}
     >
-      <PhoneIcon
-        className={classNames(
-          `w-6 h-6 group-hover:text-primary-main`,
-          iconClassName,
-        )}
-      />
+      <PhoneIcon className={classNames(`w-6 h-6`, iconClassName)} />
       <span
         className={classNames(
-          `font-medium group-hover:text-primary-main w-11/12`,
+          `font-medium w-11/12 text-primary-main group-hover:underline underline-offset-4`,
           textClassName,
         )}
       >

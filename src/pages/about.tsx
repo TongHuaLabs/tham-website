@@ -6,8 +6,9 @@ import { graphql, PageProps } from 'gatsby';
 import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
 import { useMd } from '@/hooks/responsive';
-import Career from '@images/career.inline.svg';
 import { StaticImage } from 'gatsby-plugin-image';
+import QuoteSVG from '@/icons/quote.inline.svg';
+import Partner from '@/images/partner-vector.inline.svg';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -27,22 +28,26 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           <div className="h-1/2 lg:h-full w-full lg:w-1/2 flex flex-col justify-center space-y-10">
             <UnderlineHeader
               title={t('pages.about.section-1.header-1')}
-              textClassName="font-bold text-4xl md:text-5xl lg:text-6xl whitespace-pre-line md:whitespace-normal lg:whitespace-pre-line text-primary-main"
+              textClassName="font-bold text-4xl md:text-5xl lg:text-6xl whitespace-pre-line md:whitespace-normal lg:whitespace-pre-line text-primary-main !leading-normal"
               heading="h1"
               className="w-full !items-start"
               underlineClassName="!mt-10"
             />
           </div>
-          <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
+          {/* <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
             <StaticImage src="../images/logo.inline.svg" alt="logo" />
+          </div> */}
+          <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
+            <div className="bg-primary-focus w-64 h-64" />
           </div>
         </div>
       </section>
 
       {/* Section 2: ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน */}
       <section className="bg-neutral-100">
-        <div className="px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-primary-main text-center md:whitespace-pre-line">
+        <div className="flex flex-col items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-6">
+          <QuoteSVG className="text-primary-focus w-16 h-16" />
+          <h2 className="text-3xl font-bold text-primary-main text-center md:whitespace-pre-line leading-normal">
             {t(
               isMd
                 ? 'pages.about.section-2.md-header-1'
@@ -77,13 +82,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
       </section>
 
       {/* Section 4: พันธกิจ */}
-      <section className="px-4 pb-28 lg:pb-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto flex flex-col items-center">
+      <section className="flex flex-col justify-center items-center px-4 pb-28 lg:pb-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
           textClassName="text-4xl text-neutral-900"
           heading="h2"
         />
-        <p className="text-lg text-center mt-6">
+        <p className="text-xl lg:text-2xl text-center text-neutral-900 mt-6">
           {t('pages.home.section-2.desc-1')}
         </p>
         <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0 mt-16">
@@ -104,13 +109,15 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
       </section>
 
       {/* Section 5: สนใจร่วมงานกับเรา */}
-      <section className="border border-primary-main rounded-2xl mb-28 px-4 py-10 mx-4 md:mx-6 lg:mx-16 xl:mx-28 2xl:px-0 max-w-7xl 2xl:mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-around">
-        <Career className="w-80" />
-        <div className="mt-16 flex flex-col items-center lg:items-start lg:mt-0">
+      <section className="border border-primary-main rounded-2xl mb-28 px-10 py-10 mx-4 md:mx-6 lg:mx-16 xl:mx-28 max-w-7xl 2xl:mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-around">
+        <div className="lg:w-1/2 flex justify-end lg:pr-10">
+          <Partner className="w-full md:w-1/2 h-full lg:w-full mx-auto" />
+        </div>
+        <div className="mt-16 flex flex-col items-center lg:items-start lg:mt-0 text-center">
           <h2 className="text-4xl font-bold text-primary-main">
             {t('pages.about.section-4.header-1')}
           </h2>
-          <h3 className="text-2xl text-neutral-900 mt-2 px-4 text-center lg:px-0">
+          <h3 className="text-2xl text-neutral-900 mt-4 text-center lg:text-left lg:px-0">
             {t('pages.about.section-4.desc-1')}
           </h3>
           <Link to="/contact" className="mt-5">
