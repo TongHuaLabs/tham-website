@@ -4,6 +4,7 @@ import { Link } from 'gatsby-plugin-react-i18next';
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import type { RouteType } from '@/hooks/useRoute';
+import { useActiveMenu } from '@/hooks/useActiveMenu';
 
 interface DisclosureNavigationProps extends RouteType {
   className?: string;
@@ -15,6 +16,7 @@ const DisclosureNavigation: React.FC<DisclosureNavigationProps> = ({
   menu,
   className,
 }) => {
+  const active = useActiveMenu(title);
   const hasChild = menu && menu.length > 0;
 
   return (
@@ -66,7 +68,10 @@ const DisclosureNavigation: React.FC<DisclosureNavigationProps> = ({
       ) : (
         <Link
           to={href || ''}
-          className="w-1/2 pb-4 text-sm text-neutral-50 font-medium"
+          className={classNames(
+            `w-1/2 pb-4 text-sm text-neutral-50 hover:text-primary-main font-medium`,
+            active && '!text-primary-main',
+          )}
         >
           {title}
         </Link>

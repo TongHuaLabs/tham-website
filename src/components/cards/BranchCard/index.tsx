@@ -5,8 +5,14 @@ import { MapPinIcon } from '@heroicons/react/24/solid';
 type BranchCardType = {
   branch?: string;
   location?: string;
-  tel?: string;
-  line?: string;
+  phone?: {
+    display?: string;
+    tel?: string;
+  };
+  line?: {
+    display?: string;
+    href?: string;
+  };
   email?: string;
   className?: string;
 };
@@ -14,7 +20,7 @@ type BranchCardType = {
 const BranchCard: React.FC<BranchCardType> = ({
   branch,
   location,
-  tel,
+  phone,
   line,
   email,
   className,
@@ -32,16 +38,16 @@ const BranchCard: React.FC<BranchCardType> = ({
       </div>
       <p className="text-sm text-neutral-900">{location}</p>
       <div className="flex flex-row items-center">
-        <a href={`tel:${tel}`} className="w-1/2">
+        <a href={`tel:${phone?.tel}`} className="w-1/2">
           Tel:{' '}
           <span className="text-primary-main hover:underline unlderline-offset-4">
-            {tel}
+            {phone?.display}
           </span>
         </a>
-        <a href={`tel:${line}`} className="w-1/2">
+        <a href={`tel:${line?.href}`} className="w-1/2">
           Line@:{' '}
           <span className="text-primary-main hover:underline unlderline-offset-4">
-            {line}
+            {line?.display}
           </span>
         </a>
       </div>

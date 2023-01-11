@@ -209,8 +209,14 @@ export const query = graphql`
                 location
                 branch
                 email
-                line
-                tel
+                line {
+                  display
+                  href
+                }
+                phone {
+                  display
+                  tel
+                }
               }
             }
           }
@@ -226,8 +232,14 @@ export const query = graphql`
                 location
                 branch
                 email
-                line
-                tel
+                line {
+                  display
+                  href
+                }
+                phone {
+                  display
+                  tel
+                }
               }
             }
           }
