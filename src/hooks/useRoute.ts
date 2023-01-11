@@ -22,7 +22,7 @@ const routeEN: RouteType[] = [
   { title: 'Home', href: '/' },
   { title: 'About', href: '/about' },
   { title: 'News', href: '/news' },
-  { title: 'ContactUs', href: '/contact' },
+  { title: 'Contact', href: '/contact' },
 ];
 
 export const useRoute = () => {
