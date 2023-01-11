@@ -71,15 +71,13 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
             <div className="flex flex-col md:flex-row lg:flex-col space-y-4 md:space-y-0 lg:space-y-4 items-start">
               <div className="w-full md:w-1/2 lg:w-full flex flex-row items-center space-x-4">
                 <ClockIcon className="w-8 h-8 text-neutral-900" />
-                <span className="font-medium whitespace-pre-line w-11/12">
+                <span className="whitespace-pre-line w-11/12">
                   {working_time}
                 </span>
               </div>
               <div className="w-full md:w-1/2 lg:w-full flex flex-row items-center space-x-4">
                 <MapPinIcon className="w-8 h-8 text-neutral-900" />
-                <span className="font-medium whitespace-pre-line w-11/12">
-                  {address}
-                </span>
+                <span className="whitespace-pre-line w-11/12">{address}</span>
               </div>
             </div>
           </div>

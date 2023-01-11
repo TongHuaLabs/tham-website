@@ -22,25 +22,28 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
 
   return (
     <MainLayout>
-      {/* Section 1: Tong Hua Asset Management */}
-      <section className="full-page bg-gradient-to-t from-primary-focus via-transparent to-transparent lg:bg-gradient-to-l">
-        <div className="h-full flex flex-col justify-center lg:flex-row lg:justify-between items-center px-4 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
-          <div className="h-1/2 lg:h-full w-full lg:w-1/2 flex flex-col justify-center space-y-10">
-            <UnderlineHeader
-              title={t('pages.about.section-1.header-1')}
-              textClassName="font-bold text-4xl md:text-5xl lg:text-6xl whitespace-pre-line md:whitespace-normal lg:whitespace-pre-line text-primary-main !leading-normal"
-              heading="h1"
-              className="w-full !items-start"
-              underlineClassName="!mt-10"
-            />
-          </div>
-          {/* <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
-            <StaticImage src="../images/logo.inline.svg" alt="logo" />
-          </div> */}
-          <div className="h-1/2 w-full lg:w-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end">
-            <div className="bg-primary-focus w-64 h-64" />
-          </div>
+      {/* Section 1: เกี่ยวกับเรา */}
+      <section className="px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-0 flex flex-col items-center lg:flex-row">
+        <div className="flex flex-col items-start space-y-6 lg:w-3/4 lg:pr-10">
+          <UnderlineHeader
+            title={t('pages.about.section-1.header-1')}
+            textClassName="text-4xl text-neutral-900"
+            className="!items-start"
+            heading="h2"
+          />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${t('pages.about.section-1.desc-1')}` || '<div />',
+            }}
+            className="about"
+          />
+          <p>{t('pages.about.section-1.desc-2')}</p>
         </div>
+        <StaticImage
+          src="../images/logo.inline.svg"
+          alt="logo"
+          className="w-72 lg:w-1/4"
+        />
       </section>
 
       {/* Section 2: ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน */}
@@ -57,32 +60,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         </div>
       </section>
 
-      {/* Section 3: เกี่ยวกับเรา */}
-      <section className="px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-0 flex flex-col items-center lg:flex-row">
-        <div className="flex flex-col items-start space-y-6 lg:w-3/4 lg:pr-10">
-          <UnderlineHeader
-            title={t('pages.about.section-3.header-1')}
-            textClassName="text-4xl text-neutral-900"
-            className="!items-start"
-            heading="h2"
-          />
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${t('pages.about.section-3.desc-1')}` || '<div />',
-            }}
-            className="about"
-          />
-          <p>{t('pages.about.section-3.desc-2')}</p>
-        </div>
-        <StaticImage
-          src="../images/logo.inline.svg"
-          alt="logo"
-          className="w-72 lg:w-1/4"
-        />
-      </section>
-
-      {/* Section 4: พันธกิจ */}
-      <section className="flex flex-col justify-center items-center px-4 pb-28 lg:pb-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
+      {/* Section 3: พันธกิจ */}
+      <section className="flex flex-col justify-center items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
         <UnderlineHeader
           title={t('pages.home.section-2.header-1')}
           textClassName="text-4xl text-neutral-900"
@@ -108,7 +87,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         </div>
       </section>
 
-      {/* Section 5: สนใจร่วมงานกับเรา */}
+      {/* Section 4: สนใจร่วมงานกับเรา */}
       <section className="border border-primary-main rounded-2xl mb-28 px-10 py-10 mx-4 md:mx-6 lg:mx-16 xl:mx-28 max-w-7xl 2xl:mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-around">
         <div className="lg:w-1/2 flex justify-end lg:pr-10">
           <Partner className="w-full md:w-1/2 h-full lg:w-full mx-auto" />

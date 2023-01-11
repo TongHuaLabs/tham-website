@@ -7,15 +7,28 @@ export const useActiveMenu = (title: string) => {
 
   useEffect(() => {
     if (
-      (pathname === '/' || pathname === '/th' || pathname === '/th/') &&
-      title === 'หน้าหลัก'
+      (pathname === '/' ||
+        pathname === '/th' ||
+        pathname === '/th/' ||
+        pathname === '/en' ||
+        pathname === '/en/') &&
+      (title === 'หน้าหลัก' || title === 'Home')
     ) {
       setIsActive(true);
-    } else if (pathname.includes('/contact') && title === 'ติดต่อเรา') {
+    } else if (
+      pathname.includes('/about') &&
+      (title === 'เกี่ยวกับบริษัท' || title === 'About')
+    ) {
       setIsActive(true);
-    } else if (pathname.includes('/news') && title === 'ข่าวสารบริษัท') {
+    } else if (
+      pathname.includes('/news') &&
+      (title === 'ข่าวสารบริษัท' || title === 'News')
+    ) {
       setIsActive(true);
-    } else if (pathname.includes('/about') && title === 'เกี่ยวกับบริษัท') {
+    } else if (
+      pathname.includes('/contact') &&
+      (title === 'ติดต่อเรา' || title === 'Contact')
+    ) {
       setIsActive(true);
     } else {
       setIsActive(false);
