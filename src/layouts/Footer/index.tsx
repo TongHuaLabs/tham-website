@@ -3,12 +3,13 @@ import Logo from '@images/logo-navbar.inline.svg';
 import Social from '@/components/Social';
 import DisclosureNavigation from '@/layouts/navigation/DisclosureNavigation';
 import { useRoute } from '@/hooks/useRoute';
-import { Link } from 'gatsby-plugin-react-i18next';
+import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 
 type FooterProps = {};
 
 const Footer: React.FC<FooterProps> = () => {
   const route = useRoute();
+  const { t } = useTranslation();
   return (
     <footer className="bg-primary-pressed">
       <div className="flex flex-col flex-wrap px-4 py-16 md:px-6 md:justify-between md:flex-row max-w-7xl mx-auto">
@@ -17,11 +18,20 @@ const Footer: React.FC<FooterProps> = () => {
             <Logo className="w-40" />
           </Link>
           <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
-            {`877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์\nกรุงเทพมหานคร 10100`}
+            {t('components.footer.address')}
           </p>
-          <p className="text-sm font-medium text-neutral-50 whitespace-pre-line break-words">
-            {`contact@tonghuaholding.com\n02-236-9171`}
-          </p>
+          <a
+            href={`mailto:${t('components.footer.email')}`}
+            className="block text-sm font-medium text-primary-main  hover:underline hover:underline-offset-4"
+          >
+            {t('components.footer.email')}
+          </a>
+          <a
+            href={`tel:${t('components.footer.phone.tel')}`}
+            className="block text-sm font-medium text-primary-main hover:underline hover:underline-offset-4"
+          >
+            {t('components.footer.phone.display')}
+          </a>
         </div>
         <div className="flex justify-center flex-col mt-6 md:w-1/2 md:pl-5 xl:w-2/5 md:mt-0 space-y-4">
           {route.map(({ title, href, menu }, key) => (
@@ -46,7 +56,7 @@ const Footer: React.FC<FooterProps> = () => {
           />
           <div className="flex flex-col mt-6 space-y-4 text-left md:text-right md:mt-0">
             <p className="text-sm text-neutral-50">
-              © สงวนลิขสิทธ์ พ.ศ. 2565 บริษัท ตงฮั้ว โฮลดิ้ง จำกัด (มหาชน)
+              © {t('components.footer.copy-right')}
             </p>
             <p className="text-sm font-medium text-neutral-50">Cookie Policy</p>
           </div>
@@ -54,7 +64,7 @@ const Footer: React.FC<FooterProps> = () => {
         <hr className="hidden mt-7 lg:block h-px w-full border-0 bg-neutral-50" />
         <div className="items-center justify-between hidden w-full lg:flex mt-7">
           <p className="text-sm text-neutral-50">
-            © สงวนลิขสิทธ์ พ.ศ. 2565 บริษัท ตงฮั้ว โฮลดิ้ง จำกัด (มหาชน)
+            © {t('components.footer.copy-right')}
           </p>
           <p className="text-sm font-medium text-neutral-50">Cookie Policy</p>
         </div>
