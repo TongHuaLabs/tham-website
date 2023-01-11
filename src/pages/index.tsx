@@ -162,6 +162,9 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             })}
             <MailTo mail={email} className="text-xl font-medium" />
           </div>
+          <Link to="/contact">
+            <PrimaryButton title={t('components.buttons.contact-us')} />
+          </Link>
         </div>
       </section>
     </MainLayout>
