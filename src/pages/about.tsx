@@ -1,14 +1,14 @@
 import React from 'react';
 import MainLayout from '@/layouts/MainLayout';
 import UnderlineHeader from '@/components/UnderlineHeader';
-import { Link, useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, PageProps } from 'gatsby';
-import { PrimaryButton } from '@/components/buttons';
+// import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
 import { useMd } from '@/hooks/responsive';
 import { StaticImage } from 'gatsby-plugin-image';
 import QuoteSVG from '@/icons/quote.inline.svg';
-import Partner from '@/images/partner-vector.inline.svg';
+// import Partner from '@/images/partner-vector.inline.svg';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -37,7 +37,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             }}
             className="about"
           />
-          <p>{t('pages.about.section-1.desc-2')}</p>
+          <p className="about">{t('pages.about.section-1.desc-2')}</p>
         </div>
         <StaticImage
           src="../images/logo.inline.svg"
@@ -88,7 +88,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
       </section>
 
       {/* Section 4: สนใจร่วมงานกับเรา */}
-      <section className="border border-primary-main rounded-2xl mb-28 px-10 py-10 mx-4 md:mx-6 lg:mx-16 xl:mx-28 max-w-7xl 2xl:mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-around">
+      {/* <section className="border border-primary-main rounded-2xl mb-28 px-10 py-10 mx-4 md:mx-6 lg:mx-16 xl:mx-28 max-w-7xl 2xl:mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-around">
         <div className="lg:w-1/2 flex justify-end lg:pr-10">
           <Partner className="w-full md:w-1/2 h-full lg:w-full mx-auto" />
         </div>
@@ -103,7 +103,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             <PrimaryButton title={t('components.buttons.career')} />
           </Link>
         </div>
-      </section>
+      </section> */}
     </MainLayout>
   );
 };
