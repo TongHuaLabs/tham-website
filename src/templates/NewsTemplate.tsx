@@ -1,20 +1,39 @@
 import React from 'react';
+import { graphql, PageProps } from 'gatsby';
 import MainLayout from '@/layouts/MainLayout';
 import UnderlineHeader from '@/components/UnderlineHeader';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { graphql, PageProps } from 'gatsby';
 import { NewsCard } from '@/components/cards';
+import Pagination from '@/components/Pagination';
 
-type NewsPageProps = PageProps<GatsbyTypes.NewsPageQuery>;
+export type NewsTemplatePageContext = {
+  limit: number;
+  skip: number;
+  numPages: number;
+  currentPage: number;
+  feedBasePath: string;
+  feedRootPath?: string;
+  gardenBasePath: string;
+};
 
-const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
+const NewsTemplate = ({
+  data: { allMarkdownRemark },
+  pageContext,
+}: PageProps<GatsbyTypes.NewsTemplateQuery, NewsTemplatePageContext>) => {
   const { t } = useTranslation();
 
-  const news = data.allMarkdownRemark.edges;
+  const { currentPage, numPages } = pageContext;
+
+  const news = allMarkdownRemark.nodes;
+
+  if (!news.length) {
+    return <div />;
+  }
+
+  console.log(pageContext);
 
   return (
     <MainLayout>
-      {/* Section 1: ข่าวสารบริษัททั้งหมด */}
       <section className="px-4 py-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-10">
         <UnderlineHeader
           title={t('pages.news.section-1.header-1')}
@@ -24,9 +43,8 @@ const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
           heading="h1"
         />
         <div className="flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
-          {news.map(({ node }, key) => {
-            const { title, description, date, cover, slug } =
-              node.frontmatter || {};
+          {news.map(({ frontmatter }, key) => {
+            const { title, description, date, cover, slug } = frontmatter || {};
             return (
               <NewsCard
                 title={title}
@@ -41,26 +59,37 @@ const NewsPage: React.FC<NewsPageProps> = ({ data }) => {
           })}
         </div>
       </section>
+      <Pagination
+        currentPage={currentPage}
+        numPages={numPages}
+        feedBasePath="/news"
+        feedRootPath="/news"
+        className="mt-10 lg:mt-16"
+      />
     </MainLayout>
   );
 };
 
-export default NewsPage;
+export default NewsTemplate;
 
-export const query = graphql`
-  query NewsPage($language: String!) {
-    allMarkdownRemark(filter: { frontmatter: { lang: { eq: $language } } }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            description
-            date(formatString: "DD MMMM YYYY")
-            slug
-            cover {
-              childImageSharp {
-                gatsbyImageData
-              }
+export const pageQuery = graphql`
+  query NewsTemplate($language: String!, $skip: Int!, $limit: Int!) {
+    allMarkdownRemark(
+      limit: $limit
+      skip: $skip
+      filter: { frontmatter: { lang: { eq: $language } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      nodes {
+        html
+        frontmatter {
+          title
+          description
+          date(formatString: "DD MMMM YYYY")
+          slug
+          cover {
+            childImageSharp {
+              gatsbyImageData
             }
           }
         }

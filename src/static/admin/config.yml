@@ -1,8 +1,10 @@
 backend:
-  name: git-gateway
-  branch: main # Change to your production branch
+  name: github
+  repo: TongHuaLabs/tham-website
+  branch: main
+  base_url: http://188.166.221.158
 
-local_backend: true # Enables Netlify CMS locally
+local_backend: false # Enables Netlify CMS locally
 media_folder: src/images
 public_folder: ../../../images
 
