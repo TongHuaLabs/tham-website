@@ -114,6 +114,13 @@ export const plugins = [
       },
       generateDefaultLanguagePage: true,
       redirect: false,
+      pages: [
+        {
+          matchPath: '/:lang?/news',
+          getLanguageFromPath: true,
+          excludeLanguages: ['en'],
+        },
+      ],
     },
   },
   'gatsby-plugin-netlify-cms',

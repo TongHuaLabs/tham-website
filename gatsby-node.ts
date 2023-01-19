@@ -31,7 +31,8 @@ type AllMarkdownRemark = {
 
 type GatsbyNodeQuery = {
   allMarkdownRemark: AllMarkdownRemark;
-  bod: AllMarkdownRemark;
+  THAllMarkdownRemark: AllMarkdownRemark;
+  ENAllMarkdownRemark: AllMarkdownRemark;
 };
 
 export const createPages: GatsbyNode['createPages'] = async ({
@@ -50,6 +51,30 @@ export const createPages: GatsbyNode['createPages'] = async ({
           }
         }
       }
+      THAllMarkdownRemark: allMarkdownRemark(
+        filter: { frontmatter: { lang: { eq: "th" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              lang
+              slug
+            }
+          }
+        }
+      }
+      ENAllMarkdownRemark: allMarkdownRemark(
+        filter: { frontmatter: { lang: { eq: "en" } } }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              lang
+              slug
+            }
+          }
+        }
+      }
     }
   `);
 
@@ -57,7 +82,8 @@ export const createPages: GatsbyNode['createPages'] = async ({
     return Promise.reject(errors);
   }
 
-  const { allMarkdownRemark } = data || {};
+  const { allMarkdownRemark, THAllMarkdownRemark, ENAllMarkdownRemark } =
+    data || {};
 
   allMarkdownRemark?.edges.forEach(({ node }) => {
     const { frontmatter } = node;
@@ -82,4 +108,40 @@ export const createPages: GatsbyNode['createPages'] = async ({
       },
     });
   });
+
+  if (THAllMarkdownRemark && ENAllMarkdownRemark) {
+    const postPerPage = 2;
+    const numPagesTH = Math.ceil(
+      THAllMarkdownRemark?.edges.length / postPerPage,
+    );
+    const numPagesEN = Math.ceil(
+      ENAllMarkdownRemark?.edges.length / postPerPage,
+    );
+
+    Array.from({ length: numPagesTH }).forEach((_, i) => {
+      actions.createPage({
+        path: i === 0 ? `/news` : `/news/${i + 1}`,
+        component: path.resolve('src', 'templates', 'NewsTemplate.tsx'),
+        context: {
+          limit: postPerPage,
+          skip: i * postPerPage,
+          numPages: numPagesTH,
+          currentPage: i + 1,
+        },
+      });
+    });
+
+    Array.from({ length: numPagesEN }).forEach((_, i) => {
+      actions.createPage({
+        path: i === 0 ? `/en/news` : `/en/news/${i + 1}`,
+        component: path.resolve('src', 'templates', 'NewsTemplate.tsx'),
+        context: {
+          limit: postPerPage,
+          skip: i * postPerPage,
+          numPages: numPagesEN,
+          currentPage: i + 1,
+        },
+      });
+    });
+  }
 };
