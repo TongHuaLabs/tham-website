@@ -65,8 +65,15 @@ export default function Pagination({
     <ul className={classNames('flex justify-center items-center', className)}>
       <li>{caretLeft}</li>
       {createPageRange(currentPage, numPages, pageRange).map((page, index) => {
+        const active = currentPage === index + 1;
         const pageLink = (
-          <span className="text-sm font-semibold text-neutral-900">{page}</span>
+          <span
+            className={`text-sm font-semibold text-neutral-900 ${
+              active && 'text-white'
+            }`}
+          >
+            {page}
+          </span>
         );
 
         return (

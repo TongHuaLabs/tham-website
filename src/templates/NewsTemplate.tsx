@@ -58,14 +58,13 @@ const NewsTemplate = ({
             );
           })}
         </div>
+        <Pagination
+          currentPage={currentPage}
+          numPages={numPages}
+          feedBasePath="/news"
+          feedRootPath="/news"
+        />
       </section>
-      <Pagination
-        currentPage={currentPage}
-        numPages={numPages}
-        feedBasePath="/news"
-        feedRootPath="/news"
-        className="mt-10 lg:mt-16"
-      />
     </MainLayout>
   );
 };
