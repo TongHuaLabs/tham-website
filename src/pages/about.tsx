@@ -22,41 +22,51 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
 
   return (
     <MainLayout>
-      {/* Section 1: เกี่ยวกับเรา */}
-      <section className="px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-0 flex flex-col items-center lg:flex-row">
-        <div className="flex flex-col items-start space-y-6 lg:w-3/4 lg:pr-10">
+      {/* Section 1: บริษัทบริหารสินทรัพย์ ที่มีประสิทธิภาพ โปร่งใส และเติบโตอย่างมีเสถียรภาพยั่งยืน */}
+      <section className="full-page flex flex-col lg:flex-row">
+        <div className="flex justify-center items-center relative h-1/2 lg:h-full lg:w-1/2">
+          <div className="bg-primary-pressed/90 absolute z-10 w-full h-full" />
+          <StaticImage
+            src="../images/THH-Building.png"
+            alt="Tong Hua Building"
+            className="w-full h-full object-cover absolute z-0"
+          />
+          <StaticImage
+            src="../images/THAM-logo-square.svg"
+            alt="Tong Hua Building"
+            className="w-2/3 h-auto object-cover absolute z-20 sm:w-2/5 lg:w-2/3"
+          />
+        </div>
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col items-center justify-center px-4 md:px-6 lg:px-10 xl:px-16 2xl:px-32 space-y-8">
+          <QuoteSVG className="text-primary-focus w-20 h-20 self-start" />
+          <h2 className="text-3xl font-bold text-primary-main text-center leading-normal">
+            {t(
+              isMd
+                ? 'pages.about.section-1.md-header-1'
+                : 'pages.about.section-1.header-1',
+            )}
+          </h2>
+          <QuoteSVG className="text-primary-focus w-20 h-20 self-end rotate-180" />
+        </div>
+      </section>
+
+      {/* Section 2: เกี่ยวกับเรา */}
+      <section className="bg-primary-focus">
+        <div className="px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto flex flex-col items-center md:items-start space-y-10">
           <UnderlineHeader
-            title={t('pages.about.section-1.header-1')}
+            title={t('pages.about.section-2.header-1')}
             textClassName="text-4xl text-neutral-900"
-            className="!items-start"
+            className="md:items-start"
             heading="h2"
+            underlineClassName="!bg-primary-main"
           />
           <div
             dangerouslySetInnerHTML={{
-              __html: `${t('pages.about.section-1.desc-1')}` || '<div />',
+              __html: `${t('pages.about.section-2.desc-1')}` || '<div />',
             }}
             className="about"
           />
-          <p className="about">{t('pages.about.section-1.desc-2')}</p>
-        </div>
-        <StaticImage
-          src="../images/logo.inline.svg"
-          alt="logo"
-          className="w-72 lg:w-1/4"
-        />
-      </section>
-
-      {/* Section 2: ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน */}
-      <section className="bg-neutral-100">
-        <div className="flex flex-col items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-6">
-          <QuoteSVG className="text-primary-focus w-16 h-16" />
-          <h2 className="text-3xl font-bold text-primary-main text-center md:whitespace-pre-line leading-normal">
-            {t(
-              isMd
-                ? 'pages.about.section-2.md-header-1'
-                : 'pages.about.section-2.header-1',
-            )}
-          </h2>
+          <p className="about">{t('pages.about.section-2.desc-2')}</p>
         </div>
       </section>
 
@@ -94,10 +104,10 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         </div>
         <div className="mt-16 flex flex-col items-center lg:items-start lg:mt-0 text-center">
           <h2 className="text-4xl font-bold text-primary-main">
-            {t('pages.about.section-4.header-1')}
+            {t('pages.about.section-5.header-1')}
           </h2>
           <h3 className="text-2xl text-neutral-900 mt-4 text-center lg:text-left lg:px-0">
-            {t('pages.about.section-4.desc-1')}
+            {t('pages.about.section-5.desc-1')}
           </h3>
           <Link to="/career" className="mt-5">
             <PrimaryButton title={t('components.buttons.career')} />
