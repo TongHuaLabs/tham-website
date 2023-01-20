@@ -39,8 +39,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           className="w-full h-full object-cover absolute z-0 opacity-20"
         />
         <div className="absolute z-20 w-full h-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
-          <div className="flex flex-col">
-            <StaticImage src="../images/THAM-logo-mark.inline.svg" alt="logo" />
+          <div className="flex flex-col justify-center items-center lg:items-end">
+            <StaticImage
+              src="../images/THAM-logo-mark.inline.svg"
+              alt="logo"
+              className="w-3/4"
+            />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
             <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl xl:text-6xl whitespace-pre-line !leading-normal">
