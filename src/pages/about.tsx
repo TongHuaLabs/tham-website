@@ -58,7 +58,6 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             textClassName="text-4xl text-neutral-900"
             className="md:items-start"
             heading="h2"
-            underlineClassName="!bg-primary-main"
           />
           <div
             dangerouslySetInnerHTML={{

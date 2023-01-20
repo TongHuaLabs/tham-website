@@ -107,7 +107,6 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
           textClassName="text-4xl text-neutral-900"
           heading="h2"
           className="!items-start"
-          underlineClassName="!border-primary-main"
         />
         <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
           {branches?.map((branch, key) => {

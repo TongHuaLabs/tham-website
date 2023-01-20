@@ -30,8 +30,6 @@ const NewsTemplate = ({
     return <div />;
   }
 
-  console.log(pageContext);
-
   return (
     <MainLayout>
       <section className="px-4 py-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-10">
@@ -39,7 +37,6 @@ const NewsTemplate = ({
           title={t('pages.news.section-1.header-1')}
           textClassName="text-4xl text-neutral-900"
           className="!items-start w-max md:pl-2"
-          underlineClassName="!border-primary-main"
           heading="h1"
         />
         <div className="flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">

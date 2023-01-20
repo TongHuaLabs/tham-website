@@ -27,7 +27,7 @@ const UnderlineHeader: React.FC<UnderlineHeaderProps> = ({
       )}
       <div
         className={classNames(
-          'h-0.5 rounded-md bg-secondary-main w-16',
+          'h-0.5 rounded-md bg-primary-main w-16',
           underlineClassName,
         )}
       />
