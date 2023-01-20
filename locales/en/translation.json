@@ -49,16 +49,16 @@
       }
     },
     "about": {
+      "section-1": {
+        "header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน",
+        "md-header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่\nยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน"
+      },
       "section-2": {
         "header-1": "เกี่ยวกับเรา",
         "desc-1": "Tong Hua Labs is an Innovation and Creativity Lab under <a href='https://tonghuaholding.com'>Tong Hua Holding</a> Public Company Limited. We are located on the historic Chareonkrung road in Bangkok, Thailand — The first modern road built in Thailand. Our lab was established to serve as a playground for experimenting with emerging technologies to see how they can be applied",
         "desc-2": "Tong Hua Labs is an Innovation and Creativity Lab under Public Company Limited. We are located on the historic Chareonkrung road in Bangkok, Thailand — The first modern road built in Thailand. Our lab was established to serve as a playground for experimenting with emerging technologies to see how they can be applied"
       },
-      "section-3": {
-        "header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน",
-        "md-header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่\nยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน"
-      },
-      "section-5": {
+      "section-4": {
         "header-1": "สนใจร่วมงานกับเรา",
         "desc-1": "Driving Digital innovation through a culture of"
       }
@@ -79,7 +79,11 @@
               "display": "02-236-9171-4",
               "tel": "+66223691714"
             },
-            "mail": "contact@thamc.com"
+            "mail": "contact@thamc.com",
+            "line": {
+              "display": "@THAMC",
+              "url": "/"
+            }
           },
           "operation-contact": {
             "title": "ติดต่อส่วนดำเนินการ",

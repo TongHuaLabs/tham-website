@@ -79,7 +79,11 @@
               "display": "02-236-9171-4",
               "tel": "+66223691714"
             },
-            "mail": "contact@thamc.com"
+            "mail": "contact@thamc.com",
+            "line": {
+              "display": "@THAMC",
+              "url": "/"
+            }
           },
           "operation-contact": {
             "title": "ติดต่อส่วนดำเนินการ",
