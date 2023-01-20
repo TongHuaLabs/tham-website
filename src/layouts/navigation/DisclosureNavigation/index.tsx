@@ -69,7 +69,7 @@ const DisclosureNavigation: React.FC<DisclosureNavigationProps> = ({
         <Link
           to={href || ''}
           className={classNames(
-            `pb-4 text-sm text-neutral-50 hover:text-primary-main font-medium`,
+            `text-sm text-neutral-50 hover:text-primary-main font-medium`,
             active && '!text-primary-main',
           )}
         >

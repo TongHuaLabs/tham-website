@@ -9,6 +9,7 @@ import MailTo from '@/components/MailTo';
 import { BranchCard } from '@/components/cards';
 import { PrimaryButton } from '@/components/buttons';
 import Partner from '@/images/partner-vector.inline.svg';
+import Line from '@/components/Line';
 
 type ContactUsPageProps = PageProps<GatsbyTypes.ContactUsPageQuery>;
 
@@ -25,7 +26,12 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
     (language === 'th' ? contactInfoTH : contactInfoEN)?.pages?.contact_us
       ?.section_1?.data || {};
 
-  const { title: mTitle, phone: mPhone, mail: mMail } = main_contact || {};
+  const {
+    title: mTitle,
+    phone: mPhone,
+    mail: mMail,
+    line: mLine,
+  } = main_contact || {};
   const { title: oTitle, phone: oPhone, mail: oMail } = operation_contact || {};
 
   return (
@@ -55,6 +61,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                   className="mt-4"
                 />
                 <MailTo mail={mMail} className="mt-2" />
+                <Line line={mLine?.display} url={mLine?.url} className="mt-2" />
               </div>
               <div className="w-full md:w-1/2 flex flex-col">
                 <span className="w-max bg-primary-main px-4 py-1 text-neutral-50 rounded-full text-base font-bold">
@@ -100,7 +107,6 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
           textClassName="text-4xl text-neutral-900"
           heading="h2"
           className="!items-start"
-          underlineClassName="!border-primary-main"
         />
         <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
           {branches?.map((branch, key) => {
@@ -156,6 +162,10 @@ export const query = graphql`
                   display
                   tel
                 }
+                line {
+                  display
+                  url
+                }
               }
               operation_contact {
                 title
@@ -183,6 +193,10 @@ export const query = graphql`
                 phone {
                   display
                   tel
+                }
+                line {
+                  display
+                  url
                 }
               }
               operation_contact {

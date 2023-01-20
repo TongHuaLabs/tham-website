@@ -13,7 +13,7 @@ const NotFoundPage: React.FC<{}> = () => {
         <StaticImage
           src="../images/404-unplugged.svg"
           alt="404 NotFound"
-          className="w-4/5 lg:w-[45%] self-end lg:self-center"
+          className="self-end lg:self-center"
         />
         <div className="flex flex-col space-y-10 lg:w-[45%]">
           <StaticImage
