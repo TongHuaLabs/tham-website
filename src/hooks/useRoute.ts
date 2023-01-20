@@ -14,7 +14,7 @@ export type RouteType = {
 const routeTH: RouteType[] = [
   { title: 'หน้าหลัก', href: '/' },
   { title: 'เกี่ยวกับบริษัท', href: '/about' },
-  { title: 'ข่าวสารบริษัท', href: '/news' },
+  { title: 'ข่าวสารและสื่อ', href: '/news' },
   { title: 'ติดต่อเรา', href: '/contact' },
 ];
 
