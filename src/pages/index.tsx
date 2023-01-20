@@ -10,6 +10,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import NewsCard from '@/components/cards/NewsCard';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
+import Line from '@/components/Line';
 
 type IndexPageProps = PageProps<GatsbyTypes.IndexPageQuery>;
 
@@ -25,21 +26,27 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const { contact: contactInfo } =
     data.contactInfo?.pages?.home?.section_5?.data || {};
 
-  const { phone, email } = contactInfo || {};
+  const { phone, email, line } = contactInfo || {};
 
   return (
     <MainLayout>
       {/* Section 1: Tong Hua Asset Management */}
-      <section className="full-page flex justify-center bg-gradient-to-b from-primary-focus via-transparent to-transparent">
-        <div className="w-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
+      <section className="relative full-page flex justify-center">
+        <div className="bg-gradient-to-b lg:bg-gradient-to-bl from-transparent to-primary-focus/50 absolute z-10 w-full h-full" />
+        <StaticImage
+          src="../images/welcome-home-image.png"
+          alt="Tong Hua Asset Management"
+          className="w-full h-full object-cover absolute z-0 opacity-20"
+        />
+        <div className="absolute z-20 w-full h-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col">
-            <StaticImage src="../images/logo.inline.svg" alt="logo" />
+            <StaticImage src="../images/THAM-logo-mark.inline.svg" alt="logo" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
-            <h1 className="font-semibold text-neutral-900 text-4xl md:text-6xl whitespace-pre-line !leading-normal">
+            <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl xl:text-6xl whitespace-pre-line !leading-normal">
               {t('pages.home.section-1.header-1')}
             </h1>
-            <h2 className="text-neutral-900 text-xl md:text-2xl mt-4">
+            <h2 className="text-primary-pressed md:text-2xl mt-4">
               {t('pages.home.section-1.desc-1')}
             </h2>
             <Link to="/about" className="mt-10 lg:mt-16">
@@ -67,7 +74,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                   icon={icon?.childImageSharp?.gatsbyImageData}
                   title={title}
                   desc={desc}
-                  className="items-center text-center lg:items-start lg:text-left"
+                  className="items-center text-center"
                 />
               </div>
             );
@@ -84,7 +91,10 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           />
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-              <StaticImage src="../images/services.png" alt="service" />
+              <StaticImage
+                src="../images/our-service-vector.svg"
+                alt="service"
+              />
             </div>
             <div className="flex flex-col items-center lg:items-start lg:pr-4">
               <h2 className="text-primary-main text-3xl font-bold mt-4">
@@ -161,6 +171,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
               );
             })}
             <MailTo mail={email} className="text-xl font-medium" />
+            <Line line={line?.display} url={line?.url} />
           </div>
           <Link to="/contact">
             <PrimaryButton title={t('components.buttons.contact-us')} />
@@ -224,6 +235,10 @@ export const query = graphql`
                   display
                 }
                 email
+                line {
+                  display
+                  url
+                }
               }
             }
           }

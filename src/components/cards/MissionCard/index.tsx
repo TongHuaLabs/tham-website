@@ -23,10 +23,8 @@ const MissionCard: React.FC<MissionCardType> = ({
         )}
       </div>
       <div className="mt-6">
-        <span className="text-2xl text-primary-main font-semibold">
-          {title}
-        </span>
-        <p className="text-lg text-nuetral-900 line-clamp-4 mt-2">{desc}</p>
+        <span className="text-2xl text-primary-main font-bold">{title}</span>
+        <p className="text-nuetral-900 line-clamp-4 mt-2">{desc}</p>
       </div>
     </div>
   );

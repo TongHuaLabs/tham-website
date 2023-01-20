@@ -43,7 +43,11 @@
             "phone": [
               { "display": "(+66) 2236-9171-6", "tel": "+66223691716" }
             ],
-            "email": "contact@thamc.co.th"
+            "email": "contact@thamc.co.th",
+            "line": {
+              "display": "@THAMC",
+              "url": "/"
+            }
           }
         }
       }
