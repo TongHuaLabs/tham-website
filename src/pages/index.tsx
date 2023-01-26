@@ -11,6 +11,7 @@ import NewsCard from '@/components/cards/NewsCard';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
 import Line from '@/components/Line';
+import Seo from '@/components/Seo';
 
 type IndexPageProps = PageProps<GatsbyTypes.IndexPageQuery>;
 
@@ -30,6 +31,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
 
   return (
     <MainLayout>
+      <Seo title={t('seo.home.title')} description={t('seo.home.desc')} />
       {/* Section 1: Tong Hua Asset Management */}
       <section className="relative full-page flex justify-center">
         <div className="bg-gradient-to-b lg:bg-gradient-to-bl from-transparent to-primary-focus/50 absolute z-10 w-full h-full" />
