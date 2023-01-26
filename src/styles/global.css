@@ -21,6 +21,9 @@
   .about {
     @apply text-lg;
   }
+  .cover-lg .gatsby-image-wrapper img {
+    @apply rounded-lg !important;
+  }
 }
 
 /* Markdown */

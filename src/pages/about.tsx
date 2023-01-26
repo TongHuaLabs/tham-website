@@ -24,20 +24,22 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
     <MainLayout>
       {/* Section 1: บริษัทบริหารสินทรัพย์ ที่มีประสิทธิภาพ โปร่งใส และเติบโตอย่างมีเสถียรภาพยั่งยืน */}
       <section className="flex flex-col lg:flex-row">
-        <div className="h-[50vh] flex justify-center items-center relative lg:w-1/2">
-          <div className="bg-primary-pressed/90 absolute z-10 w-full h-full" />
-          <StaticImage
-            src="../images/THH-Building.png"
-            alt="Tong Hua Building"
-            className="w-full h-full object-cover !absolute z-0"
-          />
-          <StaticImage
-            src="../images/THAM-logo-square.svg"
-            alt="Tong Hua Building"
-            className="w-2/3 h-auto object-cover !absolute z-20 sm:w-2/5 lg:w-2/3 2xl:w-1/2"
-          />
+        <div className="lg:w-1/2 flex flex-col">
+          <div className="relative flex justify-center px-8 sm:px-14 py-20 xl:px-16 2xl:px-32">
+            <StaticImage
+              src="../images/THAM-logo-square.svg"
+              alt="Tong Hua Building"
+              className="w-full h-full relative z-20 2xl:max-w-3xl"
+            />
+            <div className="bg-primary-pressed/90 absolute z-10 inset-0 w-full h-full" />
+            <StaticImage
+              src="../images/THH-Building.png"
+              alt="Tong Hua Building"
+              className="w-full h-full object-cover !absolute z-0 inset-0"
+            />
+          </div>
         </div>
-        <div className="lg:w-1/2 flex flex-col items-center justify-center px-4 py-28 lg:py-0 md:px-6 lg:px-10 xl:px-16 2xl:px-32 space-y-8">
+        <div className="lg:w-1/2 flex flex-col items-center justify-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32 space-y-8">
           <QuoteSVG className="text-primary-focus w-20 h-20 self-start" />
           <h2 className="text-3xl font-bold text-primary-main text-center leading-normal">
             {t(
@@ -88,7 +90,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
                   icon={icon?.childImageSharp?.gatsbyImageData}
                   title={title}
                   desc={desc}
-                  className="items-center text-center lg:items-start lg:text-left"
+                  className="items-center text-center"
                 />
               </div>
             );
