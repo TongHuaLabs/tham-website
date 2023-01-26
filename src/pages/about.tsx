@@ -88,7 +88,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
                   icon={icon?.childImageSharp?.gatsbyImageData}
                   title={title}
                   desc={desc}
-                  className="items-center text-center lg:items-start lg:text-left"
+                  className="items-center text-center"
                 />
               </div>
             );

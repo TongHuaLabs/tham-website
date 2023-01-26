@@ -151,12 +151,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
       <section className="flex flex-col-reverse md:flex-row-reverse">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.748859222239!2d100.51239781483024!3d13.733648990359175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2999cb642394d%3A0x30bc126296234b83!2sTONG%20HUA%20HOLDING%20PCL!5e0!3m2!1sen!2sth!4v1657095822723!5m2!1sen!2sth"
-          className="w-full h-80 border-0 md:w-1/2 md:h-96"
+          className="w-full first-line:border-0 md:w-1/2 h-[430px]"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-        <div className="flex flex-col h-80 bg-primary-focus md:w-1/2 px-6 lg:px-24 xl:px-32 md:px-8 md:h-96 justify-center items-start space-y-10">
+        <div className="flex flex-col bg-primary-focus md:w-1/2 px-6 py-20 h-[430px] lg:px-24 xl:px-32 md:px-8 justify-between items-start space-y-10">
           <UnderlineHeader
             title={t('pages.home.section-5.header-1')}
             className="text-4xl font-bold !items-start text-neutral-900"
