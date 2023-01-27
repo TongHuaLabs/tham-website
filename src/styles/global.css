@@ -15,12 +15,6 @@
   .full-page {
     height: calc(100vh - 64px);
   }
-  .about a {
-    @apply text-primary-main font-normal hover:underline text-lg;
-  }
-  .about {
-    @apply text-lg;
-  }
   .cover-lg .gatsby-image-wrapper img {
     @apply rounded-lg !important;
   }

@@ -20,7 +20,7 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'hidden',
-          default: '/news/blog/',
+          default: 'news',
         }
       - { label: 'Lang', name: 'lang', widget: 'hidden', default: 'th' }
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -56,7 +56,7 @@ collections:
           label: 'Category',
           name: 'category',
           widget: 'hidden',
-          default: '/news/blog/',
+          default: 'news',
         }
       - { label: 'Lang', name: 'lang', widget: 'hidden', default: 'en' }
       - { label: 'Title', name: 'title', widget: 'string' }
@@ -80,3 +80,79 @@ collections:
           required: false,
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  # Branches EN
+  - name: 'branches_EN'
+    label: 'Branches EN'
+    folder: 'src/markdown/braches/en'
+    create: true
+    slug: '{{title}}'
+    fields:
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'oa' }
+      - { label: 'Lang', name: 'lang', widget: 'hidden', default: 'en' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Address', name: 'address', widget: 'string' }
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Code', name: 'code', hint: 'Example: 01', widget: 'string' }
+      - {
+          label: 'Tel Display',
+          name: 'tel_display',
+          hint: 'Example: (+66) 2236-0171-6',
+          widget: 'string',
+        }
+      - {
+          label: 'Tel To',
+          name: 'tel',
+          hint: 'Example: +66223601716',
+          widget: 'string',
+        }
+      - {
+          label: 'Line ID',
+          name: 'line_display',
+          hint: 'Example: @thamc',
+          widget: 'string',
+        }
+      - {
+          label: 'Line URL',
+          name: 'line_url',
+          hint: 'Example: https://www.google.com',
+          widget: 'string',
+        }
+
+  # Branches TH
+  - name: 'branches_TH'
+    label: 'Branches TH'
+    folder: 'src/markdown/braches/th'
+    create: true
+    slug: '{{title}}'
+    fields:
+      - { label: 'Category', name: 'category', widget: 'hidden', default: 'oa' }
+      - { label: 'Lang', name: 'lang', widget: 'hidden', default: 'th' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Address', name: 'address', widget: 'string' }
+      - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Code', name: 'code', hint: 'Example: 01', widget: 'string' }
+      - {
+          label: 'Tel Display',
+          name: 'tel_display',
+          hint: 'Example: (+66) 2236-0171-6',
+          widget: 'string',
+        }
+      - {
+          label: 'Tel To',
+          name: 'tel',
+          hint: 'Example: +66223601716',
+          widget: 'string',
+        }
+      - {
+          label: 'Line ID',
+          name: 'line_display',
+          hint: 'Example: @thamc',
+          widget: 'string',
+        }
+      - {
+          label: 'Line URL',
+          name: 'line_url',
+          hint: 'Example: https://www.google.com',
+          widget: 'string',
+        }

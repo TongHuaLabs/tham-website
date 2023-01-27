@@ -5,7 +5,6 @@ import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
 import { graphql, PageProps } from 'gatsby';
 // import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
-import { useMd } from '@/hooks/responsive';
 import { StaticImage } from 'gatsby-plugin-image';
 import QuoteSVG from '@/icons/quote.inline.svg';
 // import Partner from '@/images/partner-vector.inline.svg';
@@ -15,10 +14,14 @@ type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
-  const isMd = useMd();
 
-  const missions = (language === 'th' ? data.missionsTH : data.missionsEN)
-    ?.pages?.home?.section_2?.data?.missions;
+  const isThaiLang = language === 'th';
+
+  const missions = (isThaiLang ? data.missionsTH : data.missionsEN)?.pages?.home
+    ?.section_2?.data?.missions;
+
+  const info = (isThaiLang ? data.infoTH : data.infoEN)?.pages?.about?.section_2
+    ?.data?.info;
 
   return (
     <MainLayout>
@@ -42,11 +45,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         <div className="lg:w-1/2 flex flex-col items-center justify-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32 space-y-8">
           <QuoteSVG className="text-primary-focus w-20 h-20 self-start" />
           <h2 className="text-3xl font-bold text-primary-main text-center leading-normal">
-            {t(
-              isMd
-                ? 'pages.about.section-1.md-header-1'
-                : 'pages.about.section-1.header-1',
-            )}
+            {t('pages.about.section-1.header-1')}
           </h2>
           <QuoteSVG className="text-primary-focus w-20 h-20 self-end rotate-180" />
         </div>
@@ -61,13 +60,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
             className="md:items-start"
             heading="h2"
           />
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${t('pages.about.section-2.desc-1')}` || '<div />',
-            }}
-            className="about"
-          />
-          <p className="about">{t('pages.about.section-2.desc-2')}</p>
+          <div className="space-y-5">
+            {info?.map((item, key) => (
+              <p key={key} className="text-lg text-neutral-900">
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -156,6 +155,28 @@ export const query = graphql`
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+    infoEN: enJson {
+      pages {
+        about {
+          section_2 {
+            data {
+              info
+            }
+          }
+        }
+      }
+    }
+    infoTH: thJson {
+      pages {
+        about {
+          section_2 {
+            data {
+              info
             }
           }
         }

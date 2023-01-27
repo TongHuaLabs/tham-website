@@ -56,7 +56,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
               {t('pages.home.section-1.desc-1')}
             </h2>
             <Link to="/about" className="mt-10 lg:mt-16">
-              <PrimaryButton title={t('components.buttons.about-us')} />
+              <PrimaryButton title={t('components.buttons.explorer-more')} />
             </Link>
           </div>
         </div>

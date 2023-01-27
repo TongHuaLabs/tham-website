@@ -2,27 +2,27 @@
   "pages": {
     "home": {
       "section-1": {
-        "header-1": "Tong Hua\nAsset Management",
-        "desc-1": "Write some description here"
+        "header-1": "Tong Hua\nAsset Management Co.,Ltd.",
+        "desc-1": "มุ่งมั่นพัฒนาธุกิจบริหารสินทรัพย์ ควบคู่ไปกับความรับผิดชอบต่อสังคม และปฏิบัติตามข้อกำหนดกฎหมาย"
       },
       "section-2": {
         "header-1": "พันธกิจ",
-        "desc-1": "ดำเนินธุรกิจด้านการเงิน เงินทุนและหลักทรัพย์ โดยให้บริการวงเงินกู้หมุนเวียนระยะสั้นโดยรับซื้อหนี้การค้าในรูปของใบวางบิลใบรับวางบิลหรือinvoice",
+        "desc-1": "มุ่งสู่ความเป็นเลิศในการให้บริการด้วยคุณธรรม จริยธรรม และการดำเนินการ ตามหลักธรรมาภิบาลที่มีต่อผู้ถือหุ้น คู่ค้า ลูกค้าพนักงานและทุกภาคส่วนของสังคม",
         "data": {
           "missions": [
             {
-              "title": "Customer 1",
-              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "title": "Direction (ทิศทางในการประกอบธุรกิจ)",
+              "desc": "เข้าซื้อหรือร่วมประมูลซื้อหนี้ทีมีหลักประกันและไม่มีหลักประกัน กับสถาบันการเงิน ผู้ประกอบการด้านการเงิน ธนาคารพาณิชย์ ทั้งภาครัฐและเอกชน",
               "icon": "../../src/images/icon-512x512.png"
             },
             {
-              "title": "Customer 2",
-              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "title": "Goal (เป้าหมายในการให้บริการ)",
+              "desc": "มีเป้าหมายในการซื้อหนี้ด้อยคุณภาพมาบริหาร ในเบื้องต้นคาดว่าจะซื้อมูลหนี้เต็มจำนวนมาบริหารเฉลี่ยปีละ 6,000 ล้านบาท",
               "icon": "../../src/images/icon-512x512.png"
             },
             {
-              "title": "Customer 3",
-              "desc": "Only 0.015% of the world’s data that gets generated actually gets stored. At this rate, the current cloud infrastructure can’t keep up.",
+              "title": "AAAA",
+              "desc": "AAAA",
               "icon": "../../src/images/icon-512x512.png"
             }
           ]
@@ -30,8 +30,8 @@
       },
       "section-3": {
         "header-1": "บริการของเรา",
-        "header-2": "บริหารการผ่อนชำระหนี้",
-        "desc-2": "ดำเนินธุรกิจด้านการเงิน เงินทุนและหลัก ทรัพย์โดยให้บริการวงเงินกู้ หมุนเวียน ระยะสั้น โดยรับซื้อ หนี้การค้าในรูปของ ใบวางบิล ใบรับวางบิล หรือ"
+        "header-2": "ธุรกิจบริหารสินทรัพย์ด้อยคุณภาพ",
+        "desc-2": "ดำเนินธุรกิจด้านการเงิน โดยเข้าซื้อหรือร่วมประมูลซื้อ หนี้ทีมีหลักประกันและไม่มีหลักประกัน กับสถาบันการเงิน ผู้ประกอบการด้านการเงิน ธนาคารพาณิชย์ ทั้งภาครัฐและเอกชน"
       },
       "section-4": {
         "header-1": "ข่าวสารล่าสุด"
@@ -41,7 +41,7 @@
         "data": {
           "contact": {
             "phone": [
-              { "display": "(+66) 2236-9171-6", "tel": "+66223691716" }
+              { "display": "(+66) 2236-0171-6", "tel": "++66223601716" }
             ],
             "email": "contact@thamc.co.th",
             "line": {
@@ -54,13 +54,18 @@
     },
     "about": {
       "section-1": {
-        "header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่ยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน",
-        "md-header-1": "ดำเนินธุรกิจด้วยความซื่อสัตย์และมั่นคงพร้อมก้าวสู่\nยุคใหม่เพื่อขยายธุรกิจให้เติบโตอย่างยั่งยืน"
+        "header-1": "เป็นบริษัทบริหารสินทรัพย์ที่มีประสิทธิภาพ โปร่งใส่ และเติบโตอย่างมีเสถียรภาพยั่งยืน"
       },
       "section-2": {
         "header-1": "เกี่ยวกับเรา",
-        "desc-1": "Tong Hua Labs is an Innovation and Creativity Lab under <a href='https://tonghuaholding.com'>Tong Hua Holding</a> Public Company Limited. We are located on the historic Chareonkrung road in Bangkok, Thailand — The first modern road built in Thailand. Our lab was established to serve as a playground for experimenting with emerging technologies to see how they can be applied",
-        "desc-2": "Tong Hua Labs is an Innovation and Creativity Lab under Public Company Limited. We are located on the historic Chareonkrung road in Bangkok, Thailand — The first modern road built in Thailand. Our lab was established to serve as a playground for experimenting with emerging technologies to see how they can be applied"
+        "data": {
+          "info": [
+            "บริษัท บริหารสินทรัพย์ ตงฮั้ว จำกัด หรือ THAM เป็นบริษัทในกลุ่มบริษัท ตงฮั้ว โฮลดิ้ง จำกัด (มหาชน) ซึ่งกลุ่มธุรกิจดำเนินมาด้วยระยะเวลายาวนานกว่า 60 ปี",
+            "ในปี 2564 บริษัทฯ ขยายธุรกิจจากหมวดสื่อสิ่งพิมพ์มาประกอบธุรกิจในหมวดอุตสาหกรรมเงินทุนและหลักทรัพย์ภายใต้ชื่อ THAM โดยได้รับใบอนุญาตประกอบธุรกิจบริหารสินทรัพย์จากธนาคารแห่งประเทศไทยเพื่อการประกอบธุรกิจตามพระราชกำหนดบริษัทบริหารสินทรัพย์ พ.ศ. 2541 เมื่อวันที่ 11 กุมภาพันธ์ พ.ศ.2565",
+            "บริษัทฯ มุ่งหวังเป็นเครื่องมือสำคัญในการแก้ไขปัญหาสินทรัพย์ด้อยคุณภาพของระบบสถาบันการเงิน โดยการรับซื้อรับโอนหนี้จากสถาบันการเงินต่าง ๆ เพื่อนำมาบริหารจัดการผ่านกระบวนการติดตามทวงถาม และปรับโครงสร้างหนี้กับลูกหนี้ ภายใต้หลักธรรมาภิบาล เพื่อประโยชน์ต่อลูกหนี้และภาพรวมเศรษฐกิจ",
+            "ทางบริษัทฯ รับซื้อโอนสิทธิ์จากสถาบันการเงินต่างๆ มาแล้ว จะมีหนังสือแจ้งให้ลูกหนี้ทราบ และการโทรแจ้งภาระหนี้ เสนอโครงการให้ส่วนลด หรือการแบ่งชำระ เพื่อลดภาระหนี้โดยพิจารณาจากความสามารถในการชำระหนี้ของลูกหนี้เป็นหลัก เพื่อหาข้อยุติที่ได้รับผลประโยชน์สูงสุดร่วมกันทั้งสองฝ่าย ทั้งนี้ บริษัทฯ จะพิจารณาใช้แนวทางในการเจรจา ปรับปรุงโครงสร้างหนี้ตามความเหมาะสมและอยู่ในขอบเขตของกฎหมาย"
+          ]
+        }
       },
       "section-4": {
         "header-1": "สนใจร่วมงานกับเรา",
@@ -80,8 +85,8 @@
           "main-contact": {
             "title": "ติดต่อส่วนกลาง",
             "phone": {
-              "display": "02-236-9171-4",
-              "tel": "+66223691714"
+              "display": "(+66) 2236-0171-6",
+              "tel": "+66223601716"
             },
             "mail": "contact@thamc.com",
             "line": {
@@ -92,77 +97,21 @@
           "operation-contact": {
             "title": "ติดต่อส่วนดำเนินการ",
             "phone": {
-              "display": "02-236-9171-4",
-              "tel": "+66223691714"
+              "display": "(+66) 61-283-6200",
+              "tel": "+66612836200"
             },
-            "mail": "operation@thamc.com"
+            "mail": "operations@thamc.com"
           },
-          "address": "877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์ กรุงเทพมหานคร 10100",
-          "working-time": "วันทำการ : วัน จันทร์ - ศุกร์\nเวลาทำการ: 08.30 น. - 17.30 น."
+          "address": "877-879 เจริญกรุง แขวงตลาดน้อย เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
+          "working-time": "วันทำการ : วัน จันทร์ - ศุกร์\nเวลาทำการ: 09.00 น. - 18.00 น."
         }
       },
       "section-2": {
-        "header-1": "ติดต่อศูนย์บริการลูกค้า",
-        "data": {
-          "branches": [
-            {
-              "branch": "สาขากรุงเทพกรีฑา",
-              "location": "52/36 ซอยกรุงเทพกรีฑา15 ถนนกรุงเทพกรีฑา แขวงทับช้าง เขตสะพานสูง กรุงเทพมหานคร 10250",
-              "phone": {
-                "display": "02-234-2345",
-                "tel": "+6622342345"
-              },
-              "line": {
-                "display": "@tham_psk",
-                "href": ""
-              },
-              "email": "customer.psk@thamc.co.th"
-            },
-            {
-              "branch": "สาขาศรีนครินทร์",
-              "location": "52/36 ซอยกรุงเทพกรีฑา15 ถนนกรุงเทพกรีฑา แขวงทับช้าง เขตสะพานสูง กรุงเทพมหานคร 10250",
-              "phone": {
-                "display": "02-234-2345",
-                "tel": "+6622342345"
-              },
-              "line": {
-                "display": "@tham_psk",
-                "href": ""
-              },
-              "email": "customer.psk@thamc.co.th"
-            },
-            {
-              "branch": "สาขากรุงเทพกรีฑา",
-              "location": "52/36 ซอยกรุงเทพกรีฑา15 ถนนกรุงเทพกรีฑา แขวงทับช้าง เขตสะพานสูง กรุงเทพมหานคร 10250",
-              "phone": {
-                "display": "02-234-2345",
-                "tel": "+6622342345"
-              },
-              "line": {
-                "display": "@tham_psk",
-                "href": ""
-              },
-              "email": "customer.psk@thamc.co.th"
-            },
-            {
-              "branch": "สาขาศรีนครินทร์",
-              "location": "52/36 ซอยกรุงเทพกรีฑา15 ถนนกรุงเทพกรีฑา แขวงทับช้าง เขตสะพานสูง กรุงเทพมหานคร 10250",
-              "phone": {
-                "display": "02-234-2345",
-                "tel": "+6622342345"
-              },
-              "line": {
-                "display": "@tham_psk",
-                "href": ""
-              },
-              "email": "customer.psk@thamc.co.th"
-            }
-          ]
-        }
+        "header-1": "ติดต่อศูนย์บริการลูกค้า"
       },
       "section-3": {
         "header-1": "Partner with us",
-        "desc-1": "Driving Digital innovation through a culture of experimentation."
+        "desc-1": "To become our partner or get more information, contact us at"
       }
     },
     "notfound": {
@@ -177,9 +126,11 @@
       "read-more": "อ่านเพิ่มเติม",
       "all-news": "ข่าวสารทั้งหมด",
       "contact-us": "ติดต่อเพิ่มเติม",
+      "contact": "ติดต่อเรา",
       "career": "ตำแหน่งที่เปิดรับ",
       "go-to-home": "ไปหน้าหลัก",
-      "go-back": "กลับ"
+      "go-back": "กลับ",
+      "explorer-more": "Explorer More"
     },
     "footer": {
       "address": "877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์ กรุงเทพมหานคร 10100",
