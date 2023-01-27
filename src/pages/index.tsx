@@ -251,7 +251,11 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark(filter: { frontmatter: { lang: { eq: $language } } }) {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: { category: { eq: "news" }, lang: { eq: $language } }
+      }
+    ) {
       edges {
         node {
           frontmatter {

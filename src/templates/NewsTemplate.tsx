@@ -73,7 +73,9 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: $limit
       skip: $skip
-      filter: { frontmatter: { lang: { eq: $language } } }
+      filter: {
+        frontmatter: { category: { eq: "news" }, lang: { eq: $language } }
+      }
       sort: { fields: frontmatter___date, order: DESC }
     ) {
       nodes {
