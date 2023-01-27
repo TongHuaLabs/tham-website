@@ -8,6 +8,8 @@ local_backend: false # Enables Netlify CMS locally
 media_folder: src/images
 public_folder: ../../../images
 
+publish_mode: editorial_workflow
+
 collections:
   # News TH
   - name: 'news_TH'
@@ -84,7 +86,7 @@ collections:
   # Branches EN
   - name: 'branches_EN'
     label: 'Branches EN'
-    folder: 'src/markdown/braches/en'
+    folder: 'src/markdown/branches/en'
     create: true
     slug: '{{title}}'
     fields:
@@ -122,7 +124,7 @@ collections:
   # Branches TH
   - name: 'branches_TH'
     label: 'Branches TH'
-    folder: 'src/markdown/braches/th'
+    folder: 'src/markdown/branches/th'
     create: true
     slug: '{{title}}'
     fields:
