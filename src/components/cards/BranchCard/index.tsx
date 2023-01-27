@@ -3,25 +3,23 @@ import classNames from 'classnames';
 import { MapPinIcon } from '@heroicons/react/24/solid';
 
 type BranchCardType = {
-  branch?: string;
-  location?: string;
-  phone?: {
-    display?: string;
-    tel?: string;
-  };
-  line?: {
-    display?: string;
-    href?: string;
-  };
+  title?: string;
+  address?: string;
+  tel_display?: string;
+  tel?: string;
+  line_display?: string;
+  line_url?: string;
   email?: string;
   className?: string;
 };
 
 const BranchCard: React.FC<BranchCardType> = ({
-  branch,
-  location,
-  phone,
-  line,
+  title,
+  address,
+  tel,
+  tel_display,
+  line_url,
+  line_display,
   email,
   className,
 }) => {
@@ -34,20 +32,20 @@ const BranchCard: React.FC<BranchCardType> = ({
     >
       <div className="flex flex-row items-center space-x-1">
         <MapPinIcon className="w-6 h-6 text-primary-main" />
-        <h3 className="text-neutral-900 text-xl font-bold">{branch}</h3>
+        <h3 className="text-neutral-900 text-xl font-bold">{title}</h3>
       </div>
-      <p className="text-sm text-neutral-900">{location}</p>
+      <p className="text-sm text-neutral-900">{address}</p>
       <div className="flex flex-row items-center">
-        <a href={`tel:${phone?.tel}`} className="w-1/2">
+        <a href={`tel:${tel}`} className="w-1/2">
           Tel:{' '}
           <span className="text-primary-main hover:underline unlderline-offset-4">
-            {phone?.display}
+            {tel_display}
           </span>
         </a>
-        <a href={`tel:${line?.href}`} className="w-1/2">
+        <a href={`tel:${line_url}`} className="w-1/2">
           Line@:{' '}
           <span className="text-primary-main hover:underline unlderline-offset-4">
-            {line?.display}
+            {line_display}
           </span>
         </a>
       </div>

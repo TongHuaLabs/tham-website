@@ -17,10 +17,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const { contactInfoTH, contactInfoEN, branchesTH, branchesEN } = data;
-
-  const branches = (language === 'th' ? branchesTH : branchesEN)?.pages
-    ?.contact_us?.section_2?.data?.branches;
+  const { contactInfoTH, contactInfoEN, branches } = data;
 
   const { address, working_time, main_contact, operation_contact } =
     (language === 'th' ? contactInfoTH : contactInfoEN)?.pages?.contact_us
@@ -109,10 +106,11 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
           className="!items-start"
         />
         <div className="w-full flex flex-col space-y-10 md:flex-wrap md:space-y-0 md:flex-row">
-          {branches?.map((branch, key) => {
+          {branches.edges?.map(({ node }, key) => {
+            const { frontmatter } = node || {};
             return (
               <div className="md:w-1/2 xl:w-1/3 md:p-1.5" key={key}>
-                <BranchCard {...branch} />
+                <BranchCard {...frontmatter} />
               </div>
             );
           })}
@@ -134,7 +132,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
                 {t('pages.contact-us.section-3.desc-1')}
               </h3>
               <Link to="/career" className="mt-10">
-                <PrimaryButton title={t('components.buttons.contact-us')} />
+                <PrimaryButton title={t('components.buttons.contact')} />
               </Link>
             </div>
           </div>
@@ -212,48 +210,27 @@ export const query = graphql`
         }
       }
     }
-    branchesTH: thJson {
-      pages {
-        contact_us {
-          section_2 {
-            data {
-              branches {
-                location
-                branch
-                email
-                line {
-                  display
-                  href
-                }
-                phone {
-                  display
-                  tel
-                }
-              }
-            }
-          }
+    branches: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          category: { eq: "oa" }
+          lang: { eq: $language }
+          status: { eq: true }
         }
       }
-    }
-    branchesEN: enJson {
-      pages {
-        contact_us {
-          section_2 {
-            data {
-              branches {
-                location
-                branch
-                email
-                line {
-                  display
-                  href
-                }
-                phone {
-                  display
-                  tel
-                }
-              }
-            }
+      sort: { fields: frontmatter___code, order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            address
+            tel_display
+            tel
+            line_display
+            line_url
+            email
+            code
           }
         }
       }
