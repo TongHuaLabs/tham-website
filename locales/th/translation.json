@@ -21,8 +21,8 @@
               "icon": "../../src/images/icon-512x512.png"
             },
             {
-              "title": "AAAA",
-              "desc": "AAAA",
+              "title": "Goal (เป้าหมายในการให้บริการ)",
+              "desc": "มีเป้าหมายในการซื้อหนี้ด้อยคุณภาพมาบริหาร ในเบื้องต้นคาดว่าจะซื้อมูลหนี้เต็มจำนวนมาบริหารเฉลี่ยปีละ 6,000 ล้านบาท",
               "icon": "../../src/images/icon-512x512.png"
             }
           ]
@@ -70,6 +70,10 @@
       "section-4": {
         "header-1": "สนใจร่วมงานกับเรา",
         "desc-1": "Driving Digital innovation through a culture of"
+      },
+      "section-5": {
+        "header-1": "Partner with us",
+        "desc-1": "To become our partner or get more information, contact us at"
       }
     },
     "news": {
@@ -108,10 +112,6 @@
       },
       "section-2": {
         "header-1": "ติดต่อศูนย์บริการลูกค้า"
-      },
-      "section-3": {
-        "header-1": "Partner with us",
-        "desc-1": "To become our partner or get more information, contact us at"
       }
     },
     "notfound": {

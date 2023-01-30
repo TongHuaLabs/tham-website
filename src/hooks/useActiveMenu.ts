@@ -22,7 +22,7 @@ export const useActiveMenu = (title: string) => {
       setIsActive(true);
     } else if (
       pathname.includes('/news') &&
-      (title === 'ข่าวสารบริษัท' || title === 'News')
+      (title === 'ข่าวสารและสื่อ' || title === 'News')
     ) {
       setIsActive(true);
     } else if (

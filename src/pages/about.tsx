@@ -1,13 +1,13 @@
 import React from 'react';
 import MainLayout from '@/layouts/MainLayout';
 import UnderlineHeader from '@/components/UnderlineHeader';
-import { useI18next, useTranslation } from 'gatsby-plugin-react-i18next';
+import { useI18next, useTranslation, Link } from 'gatsby-plugin-react-i18next';
 import { graphql, PageProps } from 'gatsby';
-// import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
 import { StaticImage } from 'gatsby-plugin-image';
 import QuoteSVG from '@/icons/quote.inline.svg';
-// import Partner from '@/images/partner-vector.inline.svg';
+import { PrimaryButton } from '@/components/buttons';
+import Partner from '@/images/partner-vector.inline.svg';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -27,21 +27,20 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
     <MainLayout>
       {/* Section 1: บริษัทบริหารสินทรัพย์ ที่มีประสิทธิภาพ โปร่งใส และเติบโตอย่างมีเสถียรภาพยั่งยืน */}
       <section className="flex flex-col lg:flex-row">
-        <div className="lg:w-1/2 flex flex-col">
-          <div className="relative flex justify-center px-8 sm:px-14 py-20 xl:px-16 2xl:px-32">
-            <StaticImage
-              src="../images/THAM-logo-square.svg"
-              alt="Tong Hua Building"
-              className="w-full h-full relative z-20 2xl:max-w-3xl"
-            />
-            <div className="bg-primary-pressed/90 absolute z-10 inset-0 w-full h-full" />
-            <StaticImage
-              src="../images/THH-Building.png"
-              alt="Tong Hua Building"
-              className="w-full h-full object-cover !absolute z-0 inset-0"
-            />
-          </div>
+        <div className="relative lg:w-1/2 flex justify-center items-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32">
+          <StaticImage
+            src="../images/THAM-logo-square.svg"
+            alt="Tong Hua Building"
+            className="w-3/4 md:w-1/2 lg:w-3/4 max-w-md mx-auto relative z-20"
+          />
+          <div className="bg-primary-pressed/90 absolute z-10 inset-0 w-full h-full" />
+          <StaticImage
+            src="../images/THH-Building.png"
+            alt="Tong Hua Building"
+            className="w-full h-full object-cover !absolute z-0 inset-0"
+          />
         </div>
+
         <div className="lg:w-1/2 flex flex-col items-center justify-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32 space-y-8">
           <QuoteSVG className="text-primary-focus w-20 h-20 self-start" />
           <h2 className="text-3xl font-bold text-primary-main text-center leading-normal">
@@ -114,6 +113,28 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           </Link>
         </div>
       </section> */}
+
+      {/* Section 5: Partner with us */}
+      <section className="bg-primary-focus">
+        <div className="px-4 py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-20 lg:flex-row-reverse">
+          <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
+            <div className="lg:w-1/2 2xl:w-auto flex justify-end">
+              <Partner className="w-full md:w-1/2 h-full lg:w-full mx-auto" />
+            </div>
+            <div className="flex flex-col items-center lg:items-start lg:pr-4 text-center lg:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-main">
+                {t('pages.about.section-5.header-1')}
+              </h2>
+              <h3 className="text-2xl mt-4">
+                {t('pages.about.section-5.desc-1')}
+              </h3>
+              <Link to="/contact" className="mt-10">
+                <PrimaryButton title={t('components.buttons.contact')} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </MainLayout>
   );
 };
