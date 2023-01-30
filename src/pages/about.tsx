@@ -8,6 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 import QuoteSVG from '@/icons/quote.inline.svg';
 import { PrimaryButton } from '@/components/buttons';
 import Partner from '@/images/partner-vector.inline.svg';
+import THAMSquareSVG from '@/images/THAM-logo-square.inline.svg';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -28,11 +29,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
       {/* Section 1: บริษัทบริหารสินทรัพย์ ที่มีประสิทธิภาพ โปร่งใส และเติบโตอย่างมีเสถียรภาพยั่งยืน */}
       <section className="flex flex-col lg:flex-row">
         <div className="relative lg:w-1/2 flex justify-center items-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32">
-          <StaticImage
-            src="../images/THAM-logo-square.svg"
-            alt="Tong Hua Building"
-            className="w-3/4 md:w-1/2 lg:w-3/4 max-w-md mx-auto relative z-20"
-          />
+          <THAMSquareSVG className="w-3/4 md:w-1/2 lg:w-3/4 max-w-md mx-auto relative z-20 h-full" />
           <div className="bg-primary-pressed/90 absolute z-10 inset-0 w-full h-full" />
           <StaticImage
             src="../images/THH-Building.png"

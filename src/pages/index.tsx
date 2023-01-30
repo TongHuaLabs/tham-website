@@ -11,6 +11,7 @@ import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
 import Line from '@/components/Line';
 import Seo from '@/components/Seo';
+import THAMSVG from '@/images/THAM-logo-mark.inline.svg';
 
 type IndexPageProps = PageProps<GatsbyTypes.IndexPageQuery>;
 
@@ -40,12 +41,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           className="w-full h-full object-cover absolute z-0 opacity-20"
         />
         <div className="absolute z-20 w-full h-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 lg:space-y-0 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
-          <div className="flex flex-col justify-center items-center lg:items-end lg:w-[30%]">
-            <StaticImage
-              src="../images/THAM-logo-mark.inline.svg"
-              alt="logo"
-              className="w-3/4 lg:w-full"
-            />
+          <div className="h-1/2 lg:h-full flex flex-col justify-center items-center lg:items-end lg:w-[30%]">
+            <THAMSVG className="w-3/4 lg:w-full" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start lg:w-[70%] lg:pr-10">
             <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl 2xl:text-6xl whitespace-pre-line !leading-normal">
