@@ -6,7 +6,6 @@ import { graphql, PageProps } from 'gatsby';
 import { PrimaryButton } from '@/components/buttons';
 import { MissionCard } from '@/components/cards';
 import { StaticImage } from 'gatsby-plugin-image';
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import NewsCard from '@/components/cards/NewsCard';
 import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
@@ -40,23 +39,23 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
           alt="Tong Hua Asset Management"
           className="w-full h-full object-cover absolute z-0 opacity-20"
         />
-        <div className="absolute z-20 w-full h-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
-          <div className="flex flex-col justify-center items-center lg:items-end">
+        <div className="absolute z-20 w-full h-full flex flex-col lg:flex-row-reverse justify-center lg:justify-between items-center space-y-10 md:space-y-16 lg:space-y-0 px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
+          <div className="flex flex-col justify-center items-center lg:items-end lg:w-[30%]">
             <StaticImage
               src="../images/THAM-logo-mark.inline.svg"
               alt="logo"
-              className="w-3/4"
+              className="w-3/4 lg:w-full"
             />
           </div>
-          <div className="flex flex-col text-center lg:text-left items-center lg:items-start">
-            <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl xl:text-6xl whitespace-pre-line !leading-normal">
+          <div className="flex flex-col text-center lg:text-left items-center lg:items-start lg:w-[70%] lg:pr-10">
+            <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl 2xl:text-6xl whitespace-pre-line !leading-normal">
               {t('pages.home.section-1.header-1')}
             </h1>
             <h2 className="text-primary-pressed md:text-2xl mt-4">
               {t('pages.home.section-1.desc-1')}
             </h2>
             <Link to="/about" className="mt-10 lg:mt-16">
-              <PrimaryButton title={t('components.buttons.explorer-more')} />
+              <PrimaryButton title={t('components.buttons.about-us')} />
             </Link>
           </div>
         </div>
@@ -96,25 +95,20 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             heading="h2"
           />
           <div className="flex flex-col items-center justify-center lg:justify-between lg:flex-row-reverse space-y-16 lg:space-y-0">
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="w-full lg:w-2/5 flex justify-center lg:justify-end">
               <StaticImage
                 src="../images/our-service-vector.svg"
                 alt="service"
+                quality={100}
               />
             </div>
-            <div className="flex flex-col items-center lg:items-start lg:pr-4">
-              <h2 className="text-primary-main text-3xl font-bold mt-4">
+            <div className="flex flex-col items-center lg:items-start lg:pr-10 lg:w-3/5">
+              <h2 className="text-primary-main text-3xl font-bold mt-4 text-center lg:text-left">
                 {t('pages.home.section-3.header-2')}
               </h2>
               <p className="text-lg md:text-xl mt-4 text-center lg:text-left text-neutral-900">
                 {t('pages.home.section-3.desc-2')}
               </p>
-              <Link to="/services" className="mt-10">
-                <PrimaryButton
-                  title={t('components.buttons.read-more')}
-                  rightIcon={<ArrowRightIcon className="w-4 h-4" />}
-                />
-              </Link>
             </div>
           </div>
         </div>
@@ -255,6 +249,8 @@ export const query = graphql`
       filter: {
         frontmatter: { category: { eq: "news" }, lang: { eq: $language } }
       }
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: 3
     ) {
       edges {
         node {

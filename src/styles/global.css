@@ -18,6 +18,12 @@
   .cover-lg .gatsby-image-wrapper img {
     @apply rounded-lg !important;
   }
+  .navbar-active {
+    @apply text-primary-main !important;
+  }
+  .navbar-active-popover {
+    @apply text-primary-main hover:text-white !important;
+  }
 }
 
 /* Markdown */

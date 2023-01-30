@@ -114,7 +114,7 @@ export const createPages: GatsbyNode['createPages'] = async ({
   });
 
   if (THAllMarkdownRemark && ENAllMarkdownRemark) {
-    const postPerPage = 2;
+    const postPerPage = 3;
     const numPagesTH = Math.ceil(
       THAllMarkdownRemark?.edges.length / postPerPage,
     );
