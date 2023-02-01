@@ -7,7 +7,7 @@ address: 52/36 ซอยกรุงเทพกรีฑา15 ถนนกร�
 tel_display: 02-009-1073-75
 tel: "+662009107375"
 line_display: "@thamc_ktt"
-line_url: /
+line_url: https://lin.ee/7xOPY7D
 email: customer.ktt@thamc.co.th
 code: "01"
 ---

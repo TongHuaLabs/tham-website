@@ -7,7 +7,7 @@ address: 1/106-112 หมู่บ้านเฉลิมพระเกีย�
 tel_display: 02-423-7400
 tel: "+6624237400"
 line_display: "@thamc_bsm"
-line_url: /
+line_url: https://lin.ee/0oRfIRH
 email: customer.bsm@thamc.co.th
 code: "09"
 ---

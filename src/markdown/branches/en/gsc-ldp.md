@@ -7,7 +7,7 @@ address: 2991/14-15 อาคารวิสุทธานี ซอยลา�
 tel_display: 02-793-3202
 tel: "+6627933202"
 line_display: "@thamc_ldp"
-line_url: /
+line_url: https://lin.ee/yHp9wAq
 email: customer.ldp@thamc.co.th
 code: "06"
 ---

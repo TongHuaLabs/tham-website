@@ -7,7 +7,7 @@ address: 699 โมเดอร์นฟอร์มทาวเวอร์ ช
 tel_display: 02-769-1700
 tel: "+6627691700"
 line_display: "@thamc_snr"
-line_url: /
+line_url: https://lin.ee/HEUQeRLZ
 email: customer.snr@thamc.co.th
 code: "03"
 ---

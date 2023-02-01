@@ -7,7 +7,7 @@ address: 1635/8 ถนนเจริญนคร แขวงบางลำภ
 tel_display: 02-113-6277
 tel: "+6621136277"
 line_display: "@thamc_crk"
-line_url: /
+line_url: https://lin.ee/uuxKQqQ
 email: customer.crk@thamc.co.th
 code: "08"
 ---
