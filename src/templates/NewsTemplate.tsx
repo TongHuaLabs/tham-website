@@ -5,6 +5,7 @@ import UnderlineHeader from '@/components/UnderlineHeader';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { NewsCard } from '@/components/cards';
 import Pagination from '@/components/Pagination';
+import Seo from '@/components/Seo';
 
 export type NewsTemplatePageContext = {
   limit: number;
@@ -32,6 +33,7 @@ const NewsTemplate = ({
 
   return (
     <MainLayout>
+      <Seo title={t('seo.news.title')} description={t('seo.news.desc')} />
       <section className="px-4 py-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-16 lg:space-y-10">
         <UnderlineHeader
           title={t('pages.news.section-1.header-1')}

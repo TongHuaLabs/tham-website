@@ -9,6 +9,7 @@ import QuoteSVG from '@/icons/quote.inline.svg';
 import { PrimaryButton } from '@/components/buttons';
 import Partner from '@/images/partner-vector.inline.svg';
 import THAMSquareSVG from '@/images/THAM-logo-square.inline.svg';
+import Seo from '@/components/Seo';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -26,6 +27,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
 
   return (
     <MainLayout>
+      <Seo title={t('seo.about.title')} description={t('seo.about.desc')} />
       {/* Section 1: บริษัทบริหารสินทรัพย์ ที่มีประสิทธิภาพ โปร่งใส และเติบโตอย่างมีเสถียรภาพยั่งยืน */}
       <section className="flex flex-col lg:flex-row">
         <div className="relative lg:w-1/2 flex justify-center items-center px-4 py-20 md:px-6 lg:px-10 xl:px-16 2xl:px-32">

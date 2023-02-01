@@ -4,11 +4,16 @@ import { PrimaryButton, OutlineButton } from '@/components/buttons';
 import { graphql, navigate } from 'gatsby';
 import { Link, useTranslation } from 'gatsby-plugin-react-i18next';
 import { StaticImage } from 'gatsby-plugin-image';
+import Seo from '@/components/Seo';
 
 const NotFoundPage: React.FC<{}> = () => {
   const { t } = useTranslation();
   return (
     <MainLayout>
+      <Seo
+        title={t('seo.notfound.title')}
+        description={t('seo.notfound.desc')}
+      />
       <section className="full-page bg-gradient-to-b from-primary-focus/10 to-transparent">
         <div className="h-full flex flex-col justify-center space-y-16 items-center px-4 py-28 lg:py-32 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto">
           <div className="flex flex-col space-y-4 items-center">
