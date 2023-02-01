@@ -7,7 +7,7 @@ address: 168-168/1 หมู่บ้าน ณีรวัลย์วิลล
 tel_display: 02-113-6257
 tel: "+6621136257"
 line_display: "@thamc_brn"
-line_url: /
+line_url: https://lin.ee/A0BgQGg
 email: customer.brn@thamc.co.th
 code: "10"
 ---

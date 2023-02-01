@@ -19,8 +19,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
   const { t } = useTranslation();
   const { language } = useI18next();
 
-  const missions = (language === 'th' ? data.missionsTH : data.missionsEN)
-    ?.pages?.home?.section_2?.data?.missions;
+  const isThaiLang = language === 'th';
+
+  const missions = (isThaiLang ? data.missionsTH : data.missionsEN)?.pages?.home
+    ?.section_2?.data?.missions;
+
+  const services = (isThaiLang ? data.serviceTH : data.serviceEN)?.pages?.home
+    ?.section_3?.desc_2;
 
   const news = data.allMarkdownRemark.edges;
 
@@ -99,13 +104,20 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col items-center lg:items-start lg:pr-10 lg:w-3/5">
+            <div className="flex flex-col items-center lg:items-start lg:pr-10 lg:w-3/5 space-y-4">
               <h2 className="text-primary-main text-3xl font-bold mt-4 text-center lg:text-left">
                 {t('pages.home.section-3.header-2')}
               </h2>
-              <p className="text-lg md:text-xl mt-4 text-center lg:text-left text-neutral-900">
-                {t('pages.home.section-3.desc-2')}
-              </p>
+              <div className="flex flex-col items-start justify-start list-disc space-y-4">
+                {services?.map((service, key) => (
+                  <p
+                    className="text-lg text-left lg:text-left text-neutral-900"
+                    key={key}
+                  >
+                    {service}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -238,6 +250,24 @@ export const query = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    serviceTH: thJson {
+      pages {
+        home {
+          section_3 {
+            desc_2
+          }
+        }
+      }
+    }
+    serviceEN: thJson {
+      pages {
+        home {
+          section_3 {
+            desc_2
           }
         }
       }

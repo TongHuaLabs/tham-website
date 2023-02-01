@@ -45,7 +45,6 @@ const Footer: React.FC<FooterProps> = () => {
         <Social
           className="space-x-3 md:flex-col md:space-x-0 md:space-y-4"
           backgroundClassName="bg-white w-8 h-8"
-          iconClassName="w-4 h-4 text-neutral-900"
         />
         <hr className="hidden md:block h-px w-full border-0 bg-neutral-50 !mt-10" />
         <div className="w-full flex flex-col md:justify-between md:flex-row space-y-4 md:space-y-0 md:!mt-5">

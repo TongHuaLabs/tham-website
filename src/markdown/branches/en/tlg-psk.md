@@ -7,7 +7,7 @@ address: 35/429 หมู่ที่13 ซอยประเสริฐมน�
 tel_display: 02-102-9665
 tel: "+6621029665"
 line_display: "@thamc_psk"
-line_url: /
+line_url: https://lin.ee/H2zoUVW
 email: customer.psk@thamc.co.th
 code: "07"
 ---

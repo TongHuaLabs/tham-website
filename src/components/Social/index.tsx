@@ -1,6 +1,6 @@
 import React from 'react';
 import FacebookSVG from '@/icons/facebook.inline.svg';
-import InstagramSVG from '@/icons/instagram.inline.svg';
+import LineSVG from '@/icons/line.inline.svg';
 import LinkedinSVG from '@/icons/linkedin.inline.svg';
 import classNames from 'classnames';
 
@@ -18,11 +18,11 @@ const Social: React.FC<SocialProps> = ({
   const socials = [
     {
       icon: <FacebookSVG className={iconClassName} />,
-      href: 'https://www.facebook.com/TongHuaLabs/',
+      href: 'https://www.facebook.com/thamcthailand',
     },
     {
-      icon: <InstagramSVG className={iconClassName} />,
-      href: 'https://www.instagram.com/tonghualabs/',
+      icon: <LineSVG className={iconClassName} />,
+      href: 'https://lin.ee/ucHUbTC',
     },
     {
       icon: <LinkedinSVG className={iconClassName} />,
@@ -37,7 +37,7 @@ const Social: React.FC<SocialProps> = ({
           href={href}
           target="__blank"
           className={classNames(
-            'rounded-full  flex justify-center items-center',
+            'rounded-full flex justify-center items-center',
             backgroundClassName,
           )}
           key={key}

@@ -45,7 +45,7 @@ const BranchCard: React.FC<BranchCardType> = ({
               {tel_display}
             </span>
           </a>
-          <a href={`tel:${line_url}`}>
+          <a target="__blank" href={line_url}>
             Line@:{' '}
             <span className="text-primary-main hover:underline unlderline-offset-4">
               {line_display}
