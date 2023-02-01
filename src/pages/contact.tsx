@@ -8,6 +8,7 @@ import PhoneCall from '@/components/PhoneCall';
 import MailTo from '@/components/MailTo';
 import { BranchCard } from '@/components/cards';
 import Line from '@/components/Line';
+import Seo from '@/components/Seo';
 
 type ContactUsPageProps = PageProps<GatsbyTypes.ContactUsPageQuery>;
 
@@ -31,6 +32,7 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
 
   return (
     <MainLayout>
+      <Seo title={t('seo.contact.title')} description={t('seo.contact.desc')} />
       {/* Section 1: ติดต่อเรา */}
       <section className="flex flex-col items-start px-4 pt-20 md:px-6 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-10">
         <UnderlineHeader
