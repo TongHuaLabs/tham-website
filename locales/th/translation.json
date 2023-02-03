@@ -96,7 +96,7 @@
               "display": "(+66) 2-236-0171-6",
               "tel": "+66223601716"
             },
-            "mail": "contact@thamc.com",
+            "mail": "contact@thamc.co.th",
             "line": {
               "display": "@thamc",
               "url": "https://lin.ee/ucHUbTC"
@@ -108,7 +108,7 @@
               "display": "(+66) 61-283-6200",
               "tel": "+66612836200"
             },
-            "mail": "operations@thamc.com"
+            "mail": "operations@thamc.co.th"
           },
           "address": "877-879 เจริญกรุง แขวงตลาดน้อย เขตสัมพันธวงศ์ กรุงเทพมหานคร 10100",
           "working-time": "วันทำการ : วัน จันทร์ - ศุกร์\nเวลาทำการ: 09.00 น. - 18.00 น."
@@ -137,10 +137,10 @@
       "explorer-more": "Explorer More"
     },
     "footer": {
-      "address": "877-881 เจริญกรุง ตลาดน้อย สัมพันธวงศ์ กรุงเทพมหานคร 10100",
-      "email": "contact@thamc.com",
+      "address": "877-879 เจริญกรุง ตลาดน้อย สัมพันธวงศ์ กรุงเทพมหานคร 10100",
+      "email": "contact@thamc.co.th",
       "phone": "(+66) 2236-0171-6",
-      "line": "@THAMC",
+      "line": "@thamc",
       "copy-right": "สงวนลิขสิทธ์ พ.ศ. 2565 บริษัท ตงฮั้ว โฮลดิ้ง จำกัด (มหาชน)"
     }
   },
