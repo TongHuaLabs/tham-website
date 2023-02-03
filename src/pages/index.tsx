@@ -50,13 +50,13 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
             <THAMSVG className="w-3/4 lg:w-full" />
           </div>
           <div className="flex flex-col text-center lg:text-left items-center lg:items-start lg:w-[70%] lg:pr-10">
-            <h1 className="font-semibold text-primary-pressed text-3xl md:text-5xl 2xl:text-6xl whitespace-pre-line !leading-normal">
+            <h1 className="font-semibold text-primary-pressed text-4xl md:text-5xl lg:text-6xl 2xl:text-6xl whitespace-pre-line !leading-normal">
               {t('pages.home.section-1.header-1')}
             </h1>
-            <h2 className="text-primary-pressed md:text-2xl mt-4">
+            <h2 className="text-primary-pressed text-lg md:text-2xl mt-4">
               {t('pages.home.section-1.desc-1')}
             </h2>
-            <Link to="/about" className="mt-10 lg:mt-16">
+            <Link to="/about" className="mt-10">
               <PrimaryButton title={t('components.buttons.about-us')} />
             </Link>
           </div>
@@ -104,8 +104,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ data }) => {
                 quality={100}
               />
             </div>
-            <div className="flex flex-col items-center lg:items-start lg:pr-10 lg:w-3/5 space-y-4">
-              <h2 className="text-primary-main text-3xl font-bold mt-4 text-center lg:text-left">
+            <div className="flex flex-col items-start lg:items-start lg:pr-10 lg:w-3/5 space-y-4">
+              <h2 className="text-primary-main text-3xl font-bold mt-4">
                 {t('pages.home.section-3.header-2')}
               </h2>
               <div className="flex flex-col items-start justify-start list-disc space-y-4">
