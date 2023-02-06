@@ -51,7 +51,9 @@ const Footer: React.FC<FooterProps> = () => {
           <p className="text-sm text-neutral-50">
             © {t('components.footer.copy-right')}
           </p>
-          <p className="text-sm font-medium text-neutral-50">Cookie Policy</p>
+          <p className="text-sm font-medium text-neutral-50">
+            {t('components.footer.cookie-policy')}
+          </p>
         </div>
       </div>
     </footer>
