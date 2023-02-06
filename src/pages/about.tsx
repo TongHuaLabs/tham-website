@@ -10,6 +10,9 @@ import { PrimaryButton } from '@/components/buttons';
 import Partner from '@/images/partner-vector.inline.svg';
 import THAMSquareSVG from '@/images/THAM-logo-square.inline.svg';
 import Seo from '@/components/Seo';
+import ShakeHandSVG from '@/images/shakehand.inline.svg';
+import StrategySVG from '@/images/strategy.inline.svg';
+import TargetSVG from '@/images/target.inline.svg';
 
 type AboutPageProps = PageProps<GatsbyTypes.AboutPageQuery>;
 
@@ -80,11 +83,19 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
         </p>
         <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0 mt-16">
           {missions?.map((mission, key) => {
-            const { title, desc, icon } = mission || {};
+            const { title, desc } = mission || {};
+            const missionIcon =
+              key === 0 ? (
+                <StrategySVG className="w-10 h-10" />
+              ) : key === 1 ? (
+                <TargetSVG className="w-10 h-10" />
+              ) : (
+                <ShakeHandSVG className="w-10 h-10" />
+              );
             return (
               <div key={key} className="w-full lg:w-1/3 lg:px-2.5">
                 <MissionCard
-                  icon={icon?.childImageSharp?.gatsbyImageData}
+                  icon={missionIcon}
                   title={title}
                   desc={desc}
                   className="items-center text-center"
@@ -150,11 +161,6 @@ export const query = graphql`
               missions {
                 title
                 desc
-                icon {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
               }
             }
           }
@@ -169,11 +175,6 @@ export const query = graphql`
               missions {
                 title
                 desc
-                icon {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
               }
             }
           }
