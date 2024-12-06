@@ -91,21 +91,10 @@ export const createPages: GatsbyNode['createPages'] = async ({
 
   allMarkdownRemark?.edges.forEach(({ node }) => {
     const { frontmatter } = node;
-    const { lang, slug } = frontmatter;
-
-    {
-      lang === 'th' &&
-        actions.createPage({
-          path: slug,
-          component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
-          context: {
-            slug,
-          },
-        });
-    }
+    const { slug } = frontmatter;
 
     actions.createPage({
-      path: `${lang}${slug}`,
+      path: slug,
       component: path.resolve('src', 'templates', 'MarkdownTemplate.tsx'),
       context: {
         slug,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql, PageProps } from 'gatsby';
 import { ShareButton } from '@/components/buttons';
 import { GatsbyImage } from 'gatsby-plugin-image';
@@ -19,6 +19,16 @@ const MarkdownTemplate = ({
     cover?.childImageSharp?.gatsbyImageData.images.fallback.src;
 
   const shareUrl = `${siteUrl}${pathPrefix}${slug}`;
+
+  useEffect(() => {
+    if (!markdownRemark) {
+      window.location.href = '/';
+    }
+  }, [markdownRemark]);
+
+  if (!markdownRemark) {
+    return <div />;
+  }
 
   return (
     <MainLayout>
