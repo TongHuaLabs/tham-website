@@ -26,6 +26,6 @@ cover: ""
 
 ## หากมีข้อสงสัย หรือข้อมูลที่อยากรู้เพิ่มเติม ไม่ว่าจะขอปรับโครงสร้างหนี้ อยากขอ HC ติดต่อทีมงาน THAMSTER
 
-## ได้ที่ LINE : [THAM Thailand | LINE Official Account](https://lin.ee/38M2xnN)\
+## ได้ที่ LINE : [THAM Thailand | LINE Official Account](https://lin.ee/38M2xnN)
 
 ขอบคุณครับ แล้วแวะมาคุยกับผมบ่อยๆนะค้าบบบบบ
