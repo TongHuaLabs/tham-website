@@ -41,8 +41,10 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
           heading="h1"
           className="!items-start"
         />
-        <h3 className="text-2xl font-bold">
-          {t('pages.contact-us.section-1.desc-1')}
+        <h3 className="text-2xl">
+          {t('pages.contact-us.section-1.desc-1')}{' '}
+          <strong>{t('pages.contact-us.section-1.desc-2')}</strong>{' '}
+          {t('pages.contact-us.section-1.desc-3')}
         </h3>
 
         <div className="w-full lg:h-72 flex flex-col items-start lg:items-center lg:space-x-6 space-y-10 lg:space-y-0 lg:flex-row">
@@ -96,7 +98,6 @@ const ContactUsPage: React.FC<ContactUsPageProps> = ({ data }) => {
           </div>
         </div>
       </section>
-
       {/* Section 2: ติดต่อศูนย์บริการลูกค้า */}
       <section className="flex flex-col items-start px-4 py-20 md:px-6 lg:py-28 lg:px-16 xl:px-28 2xl:px-0 max-w-7xl mx-auto space-y-10">
         <UnderlineHeader
