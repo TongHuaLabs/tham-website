@@ -79,23 +79,41 @@ const AboutPage: React.FC<AboutPageProps> = ({ data }) => {
           heading="h2"
         />
         <p className="text-xl lg:text-2xl text-center text-neutral-900 mt-6">
-          {t('pages.home.section-2.desc-1')}
+          {t('pages.home.section-2.desc.desc-1')}{' '}
+          <strong>{t('pages.home.section-2.desc.desc-2')}</strong>{' '}
+          {t('pages.home.section-2.desc.desc-3')}
         </p>
         <div className="md:w-3/4 lg:w-full flex flex-col space-y-10 lg:flex-row lg:space-y-0 mt-16">
           {missions?.map((mission, key) => {
-            const { title, desc } = mission || {};
-            const missionIcon =
-              key === 0 ? (
-                <StrategySVG className="w-10 h-10" />
-              ) : key === 1 ? (
-                <TargetSVG className="w-10 h-10" />
-              ) : (
-                <ShakeHandSVG className="w-10 h-10" />
-              );
+            const { title, desc_1, desc_2, desc_3 } = mission || {};
+            const { icon, desc } =
+              key <= 1
+                ? {
+                    icon:
+                      key === 0 ? (
+                        <StrategySVG className="w-10 h-10" />
+                      ) : (
+                        <TargetSVG className="w-10 h-10" />
+                      ),
+                    desc: (
+                      <p className="text-nuetral-900 line-clamp-4 mt-2">
+                        {desc_1} <strong>{desc_2}</strong> {desc_3}
+                      </p>
+                    ),
+                  }
+                : {
+                    icon: <ShakeHandSVG className="w-10 h-10" />,
+                    desc: (
+                      <p className="text-nuetral-900 line-clamp-4 mt-2">
+                        <strong>{desc_1}</strong> {desc_2}
+                      </p>
+                    ),
+                  };
+
             return (
               <div key={key} className="w-full lg:w-1/3 lg:px-2.5">
                 <MissionCard
-                  icon={missionIcon}
+                  icon={icon}
                   title={title}
                   desc={desc}
                   className="items-center text-center"
@@ -160,7 +178,9 @@ export const query = graphql`
             data {
               missions {
                 title
-                desc
+                desc_1
+                desc_2
+                desc_3
               }
             }
           }
@@ -174,7 +194,9 @@ export const query = graphql`
             data {
               missions {
                 title
-                desc
+                desc_1
+                desc_2
+                desc_3
               }
             }
           }

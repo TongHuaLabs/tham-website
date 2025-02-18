@@ -18,9 +18,12 @@ const Footer: React.FC<FooterProps> = () => {
             <Logo className="w-40 h-auto" />
           </Link>
           <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
-            {t('components.footer.address')}
+            {t('components.footer.title')}
           </p>
           <div className="flex flex-col space-y-2">
+            <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
+              {t('components.footer.address')}
+            </p>
             <p className="text-sm font-medium text-neutral-50 md:whitespace-pre-line">
               Tel: {t('components.footer.phone')}
             </p>

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 type MissionCardType = {
   title?: string;
-  desc?: string;
+  desc?: string | React.ReactNode;
   icon?: React.ReactNode;
   className?: string;
 };
@@ -21,7 +21,11 @@ const MissionCard: React.FC<MissionCardType> = ({
       </div>
       <div className="mt-6">
         <span className="text-2xl text-primary-main font-bold">{title}</span>
-        <p className="text-nuetral-900 line-clamp-4 mt-2">{desc}</p>
+        {typeof desc === 'string' ? (
+          <p className="text-nuetral-900 line-clamp-4 mt-2">{desc}</p>
+        ) : (
+          desc
+        )}
       </div>
     </div>
   );
