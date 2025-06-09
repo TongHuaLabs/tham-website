@@ -1,7 +1,7 @@
 ---
 lang: th
 category: oa
-status: true
+status: false
 title: สาขาเชียงใหม่
 address: 11/54 หมู่ที่ 3 ตำบลหนองหอย อำเภอเมืองเชียงใหม่ จ.เชียงใหม่ 50000
 tel_display: 098-441-9464
