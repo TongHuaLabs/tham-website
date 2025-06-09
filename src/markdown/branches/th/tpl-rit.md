@@ -1,7 +1,7 @@
 ---
 lang: th
 category: oa
-status: true
+status: false
 title: สาขารามอินทรา
 address: 4/14 ซอยรามอินทรา 127 แยก 1 แขวงมีนบุรี เขตมีนบุรี กรุงเทพมหานคร 10510
 tel_display: 084-097-0088
